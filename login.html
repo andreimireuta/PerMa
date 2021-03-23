@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="form-box">
+        <div class="button-box">
+            <div id="button"></div>
+            <button type="button" class="toggle-button" onclick="login()">Log In</button>
+            <button type="button" class="toggle-button" onclick="register()" >Register</button>
+        </div>
+
+        <form class="input-group" action="" id="login">
+            <div class="input">
+                <i class="fas fa-user" aria-hidden="false"></i>
+                <input type="text" class="input-field" placeholder="Username" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-lock"></i>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+            </div>
+
+            <label for="checkbox" class="remember-me">Remember me</label>
+            <input type="checkbox" class="checkbox-button" name="checkbox">
+            <button type="submit" class="submit-button">Login</button>
+
+        </form>
+
+        <form class="input-group" action="" id="register">
+            <div class="input">
+                <i class="fas fa-user" aria-hidden="false"></i>
+                <input type="text" class="input-field" placeholder="Username" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-envelope" aria-hidden="false"></i>
+                <input type="email" class="input-field" placeholder="Enter email" required>
+            </div>
+            <div class="input">
+                <i class="fas fa-lock"></i>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+            </div>
+
+            <label for="checkbox" class="remember-me">I agree to the terms & conditions</label>
+            <input type="checkbox" class="checkbox-button" name="checkbox">
+            <button type="submit" class="submit-button">Register</button>
+
+        </form>
+    </div>
+
+    <script>
+        var alegere1 = document.getElementById("login");
+        var alegere2 = document.getElementById("register");
+        var alegere3 = document.getElementById("button");
+
+        function register(){
+            alegere1.style.left = "-400px";
+            alegere2.style.left = "50px";
+            alegere3.style.left = "120px";
+            
+        }
+        function login(){
+            alegere1.style.left = "50px";
+            alegere2.style.left = "450px";
+            alegere3.style.left = "0px";
+        }
+    </script>
+
+</html>

@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-image:url('LoginWallpaperFinal.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    position: absolute;
+}
+.form-box{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    margin: 6% auto;
+    background: lightgrey;
+    border-radius: 15px;
+    padding: 10px;
+    overflow: hidden;
+}
+.button-box{
+    width: 240px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 25px;
+    color: rgb(150, 148, 148);
+    text-align: center;
+}
+.toggle-button{
+    padding: 10px 25px;
+    cursor: pointer;
+    position: relative;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+#button{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(to right,#111, rgb(48, 43, 43));
+    border-radius: 25px;
+    transition: all 0.7s ease;
+}
+.input-group{
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: all 0.8s ease;
+
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    margin-left: 25px;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-button{
+    width: 75%;
+    padding: 10px 25px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    background: linear-gradient(to right,#222, rgb(48, 43, 43));
+    border-radius: 25px;
+    color: #fff;
+}
+.checkbox-button{
+    margin: 30px 10px 30px 5px;
+}
+
+span{
+    color: #777;
+    font-size: 13px;
+    bottom: 100px;
+    position: absolute;
+
+}
+.remember-me{
+    color: #777;
+    font-size: 13px;
+    bottom: 92px;
+    left: 25px;
+    position: absolute;
+
+}
+.input i{
+    position: relative;
+    top:30px;
+    width: 25px;
+    float: left;
+    text-align: center;
+}
+#login{
+    left:40px;
+    
+}
+#register{
+    left:450px;
+}
