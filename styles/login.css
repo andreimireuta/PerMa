@@ -114,3 +114,15 @@ span{
 #register{
     left:450px;
 }
+
+.registerErorrs{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #222;
+    color: red;
+    background-color: #777;
+    border-radius: 25px;
+    text-align:left;
+    z-index: 1;
+}

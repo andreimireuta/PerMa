@@ -26,6 +26,7 @@ nav{
     color: #fff;
     min-height: 8vh;
     font-family: 'Poppins', sans-serif;
+    height: 70px;
 }
 .nav-links{
     display: flex;
@@ -55,13 +56,48 @@ nav{
     margin: 5px;
 
 }
+.imagine-produs{
+    display: block;
+    text-align:center;
+    width: 33%;
+    float: left;
+    background: transparent;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.imagine-produs img{
+    width: 70%;
+    /* margin: 1.6666666%;
+    */
+    margin: calc(10%/6);
+    border-radius: 5px;
+    display: inline;
 
+}
+
+.span{
+    
+}
+.container-poze{
+    width: 81%;
+    margin: 100px auto 15px auto;
+}
+
+.fa-star{
+    color: orange;
+}
 
 
 
 /*----------------------------Partea de responsive a siteului--------------------------*/
 
 @media screen and (max-width:1100px){
+    .nav-links{
+        width: 40%;
+    }
+}
+@media screen and (max-width:768px){
     .nav-links{
         width: 45%;
     }
