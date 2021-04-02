@@ -19,7 +19,7 @@
             <button type="button" class="toggle-button" onclick="register()" >Register</button>
         </div>
 
-        <form class="input-group"  id="login" method="POST">
+        <form class="input-group" action="php_scripts/loginProcess.php"  id="login" method="POST">
             
             <div class="input">
                 <i class="fas fa-user" aria-hidden="false"></i>
@@ -82,5 +82,5 @@
     ?>
     </div>
     
-
+</body>
 </html>

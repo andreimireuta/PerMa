@@ -30,13 +30,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         //Daca dupa acesti pasi nu sunt erori, atunci introducem in baza de date valorile pe care le adauga userul
         if(count($errorrs) == 0){
-            $password = md5($password);// criptam parola inainte sa o adaugam in baza de date
+            //$password = md5($password);// criptam parola inainte sa o adaugam in baza de date
             $sql = "INSERT INTO users (username, email, password)
                     VALUES ('$username','$email','$password')";
+
             if(mysqli_query($mysqli,$sql)){
-                echo "Succes! A mers, nu conteaza warning-urile";
+                $_SESSION['username'] = $username;
+                $_SESSION['success'] = "You are now logged in ";
+                header('location: ../home.php'); //redirectionarea catre home page
                 $mysqli -> close();
-                
             }
             else{
                 echo "Nu a mers, csf...";

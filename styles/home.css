@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+body{
+    margin: 0;
 }
 .logo{
     display: flex;
@@ -11,22 +13,29 @@
     margin-right: 4px;
     height: 35px;
     width: 35px;
-    float: left;
 }
 .logo-title{
     letter-spacing: 5px;
     font-size: 25px;
 }
-nav{
+.navbar{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    transition: all 0.35s ease;
     background-color: #222;
     color: #fff;
-    min-height: 8vh;
+    position: fixed;
+    top: 0;
+    min-height: 6vh;
     font-family: 'Poppins', sans-serif;
-    height: 70px;
+    padding: 22px ;
+    z-index: 1;
+}
+.sticky{
+    background-color: sienna;
+    padding: 25px ;
 }
 .nav-links{
     display: flex;
@@ -42,8 +51,6 @@ nav{
     font-size: 15px;
 }
 
-
-
 .burger-menu{
     display: none;
 }
@@ -56,37 +63,145 @@ nav{
     margin: 5px;
 
 }
-.imagine-produs{
-    display: block;
-    text-align:center;
-    width: 33%;
-    float: left;
-    background: transparent;
-    margin-bottom: 15px;
-    font-size: 16px;
-    text-transform: capitalize;
-}
-.imagine-produs img{
-    width: 70%;
-    /* margin: 1.6666666%;
-    */
-    margin: calc(10%/6);
-    border-radius: 5px;
-    display: inline;
 
-}
-
-.span{
-    
-}
-.container-poze{
-    width: 81%;
+/*(.container-poze{
+    max-width: 90%;
     margin: 100px auto 15px auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 1000px;
+    flex-basis: 90%;
+    background-color: blue;
+}
+.container-produs{
+    height: 300px;
+    margin: 10px auto; /*sus jos si apoi stanga, dreapta
+    min-width: 30%;
+    flex: 30%;
+    justify-content: space-evenly;
+    background-color: brown;
+    border: 3px solid white;
+}*/
+.container-poze{
+ width: 85%;
+ margin: 120px auto;
+ margin-left: 10%;
+}  
+.container-produs{
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+    max-width: 33%;
+}
+.row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 30px;
+}
+.container-poze img{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+}
+.button-produs{
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    border-radius: 10px;
+    padding: 4px 8px;
+    text-align: center;
+    position: relative;
+    bottom: 16rem;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.produs-info{
+    text-align:center;
+}
+.produs-info .fa{
+    color: orange;
+    font-size: 13px;
+}
+.produs-info h2{
+    font-size: 22px;
+    font-weight: 600;
+}
+.produs-info h3{
+    font-size: 18px;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+.overlay{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    margin-left: 0;
+    width: 80px;
+}
+.produs:hover .overlay{
+    opacity: 1;
+    margin-left:7px ;
+    transition: 0.5 ease;
+}
+.overlay .fa{
+    cursor: pointer;
+    color:white;
+    margin-bottom: 10px;
+}
+.container-poze h1{
+    color:#222;
+    font-size: 32px;
+    display: block;
+    padding: 5px;
+    height: 30px;
+    width: 600px;
+    border-bottom: 2px solid #444;
+    margin-top: 3%;
+    margin-bottom: 2%;
 }
 
-.fa-star{
-    color: orange;
+#cart-show{
+    width: 20%;
+    background-color:#333;
+    height: 50vh;
+    position: absolute;
+    top:87px;
+    display: none;
+    right: 130px; 
 }
+#account-show{
+    width: 20%;
+    background-color:#333;
+    height: 50vh;
+    position: absolute;
+    top:87px;
+    display: none;
+    right: 330px;
+}
+#sign-out{
+    color: sienna;
+    position: relative;
+    top: 90%;
+    left: 70%;
+}
+#sign-out:hover{
+    color: #fff;
+}
+
+
+
+
+/*---------------------------------------------Footer section--------------------------------*/
+
+
+/*-------------------------------footer links--------------------------*/
+
+
 
 
 
