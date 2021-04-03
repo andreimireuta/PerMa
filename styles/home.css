@@ -108,9 +108,8 @@ body{
     border-radius: 10px;
 }
 .button-produs{
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: transparent;
+    border-color: transparent;
     border-radius: 10px;
     padding: 4px 8px;
     text-align: center;
@@ -121,11 +120,12 @@ body{
     font-size: 20px;
 }
 .produs-info{
-    text-align:center;
+    text-align:left;
+    line-height: 1.2;
 }
 .produs-info .fa{
     color: orange;
-    font-size: 13px;
+    font-size: 15px;
 }
 .produs-info h2{
     font-size: 22px;
@@ -175,22 +175,31 @@ body{
     right: 130px; 
 }
 #account-show{
-    width: 20%;
+    padding: 2%;
+    width: 10%;
+    line-height: 2;
     background-color:#333;
-    height: 50vh;
+    height: 30vh;
     position: absolute;
     top:87px;
     display: none;
-    right: 330px;
+    right: 350px;
 }
 #sign-out{
     color: sienna;
     position: relative;
-    top: 90%;
+    top: 75%;
     left: 70%;
+}
+.account-item{
+    font-size: 18px;
+    display: block;
 }
 #sign-out:hover{
     color: #fff;
+}
+.like{
+    color: red;
 }
 
 

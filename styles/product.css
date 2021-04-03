@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+}
+.logo{
+    display: flex;
+    width: 10%;
+}
+.logo-img{
+    margin-right: 4px;
+    height: 35px;
+    width: 35px;
+}
+.logo-title{
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.35s ease;
+    background-color: #222;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    min-height: 6vh;
+    font-family: 'Poppins', sans-serif;
+    padding: 22px ;
+    z-index: 1;
+}
+.sticky{
+    background-color: sienna;
+    padding: 25px ;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.burger-menu{
+    display: none;
+}
+
+.burger-menu div{
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin: 5px;
+
+}
+.container-produs{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    margin-top: 3%;
+    background-color: #fff;
+}
+.product-image{
+    width: 40%;
+    height: 80%;
+    margin-top: 6%;
+    margin-left:8%;
+    text-align: center;
+    background-color: #fff;
+}
+.product-info{
+    width: 50%;
+    height: 80%;
+    margin: 6% auto;
+    padding-left:2%;
+    text-align: left;
+    background-color:#fff;
+    line-height: 1.8;
+    font-size: 18px;
+}
+.image-pr1{
+    width: 90%;
+    height: 95%;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+.stars .fa{
+    color:orange;
+}
+#product-description{
+    background-color:   #fff;
+    padding: 2%;
+    font-size: 18px;
+    display: none;
+    transition: 0.8s all ease;
+}
+#product-description p{
+    font-size: 17px;
+}
+#price{
+    color: orangered;
+}
+.cantitate input{
+    width:5%;
+    height: 4%;
+    font-size: 16px;
+    border: none;
+    background-color: #fff;
+    margin-right: 2%;
+    color: #111;
+    border-radius: 2px;
+
+}
+.cantitate input:hover{
+    border:1px solid #222;
+}
+.cantitate select{
+    font-size: 16px;
+    width: 10%;
+    border: none;
+    background-color: #fff;
+    margin-right: 2%;
+    color: #111;
+    border-radius: 2px;
+}
+.cantitate select:hover{
+    border:1px solid #222;
+}
+.Add-to-cart{
+    background-color: sienna;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.8s all ease;
+}
+.Add-to-cart:hover{
+    font-size: 16px;
+    padding:13px 30px;
+    border:2px solid sienna;
+    color: #111;
+    background-color: #fff;
+}
+#fullDesc{
+    margin-top: 3%;
+    cursor: pointer;
+}
+#fullDesc1{
+    margin-top: 3%;
+    cursor: pointer;
+    display: none;
+}
+.bold-title-info{
+    font-weight: 700;
+    font-size: 19px;
+}
+
+

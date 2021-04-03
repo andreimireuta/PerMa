@@ -44,7 +44,9 @@
                 <i class="fas fa-user"></i>
                 <a href="" id="account-link">Account</a>
                 <div id="account-show">
-                    <a href="#" id="sign-out">Sign out</a>
+                <a href="#" class="account-item">WatchList</a>
+                <a href="#" class="account-item">Favourite List</a>
+                <a href="#" class="account-item" id="sign-out">Sign out</a>
                 </div>
             </li>
             <li>
@@ -70,10 +72,10 @@
        <div class="row">
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs WatchList" title="WatchList"><i class="fa fa-eye" onclick="MyFunction()" id="fa-eye"></i></button>
-                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart" onclick="this.style.color='red'"></i></button>
+                        <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart" onclick="this.style.color='red'"></i></button>
                         <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
                     </div>
                </div>
@@ -88,10 +90,10 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
-                        <button type="button" class="button-produs WatchList" title="WatchList"><i class="fa fa-eye"></i></button>
-                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs WatchList" title="WatchList"><i onmouseover="this.style.color='black'" onmouseout="this.style.color='white'" class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart"></i></button>
                         <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
                     </div>
                </div>
@@ -106,7 +108,25 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -124,7 +144,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -142,7 +162,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -160,7 +180,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -178,25 +198,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
-                    <div class="overlay"> 
-                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
-                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
-                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
-                    </div>
-               </div>
-               <div class="produs-info">
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star-half"></i>
-                   <h2>Parfum dama Versace</h2>
-                   <h3>$500.00</h3>
-               </div>
-           </div>
-           <div class="container-produs">
-               <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -213,7 +215,7 @@
                </div>
            </div> <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -231,7 +233,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -249,7 +251,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-                   <img src="images/image_wallpaper1.jpg" alt="">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a>    
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>

@@ -34,12 +34,12 @@ $(document).ready(function(){
     });
 
     //pentru a face inima de wishlist rosie
-    var clickedWishlist = document.getElementsByClassName('WatchList');
+    var clickedWishlist = document.getElementById('fa-eye');
     clickedWishlist.addEventListener('mousedown',function(){
-        clickedWishlist.style.bgcolor="red";
+        clickedWishlist.style.color='red';
+        console.log("merge baaaaaa!");
     })
-
-    function myFunction() {
-        document.getElementsById("fa-eye").style.color = "red";
-      }
+    function MyFunction(){
+        clickedWishlist.style.color="red";
+    }
 });
