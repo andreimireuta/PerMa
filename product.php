@@ -82,7 +82,7 @@
             <br><br>
             <span class="cantitate">
                 <label for="cantitate"> <span class="bold-title-info">Cantitate:</span> </label>
-                <input type="number" name="cantitate" id="cantitate" min="0">
+                <input type="number" name="cantitate" id="cantitate" min="0" >
             </span>
             <button class="Add-to-cart" type="button">Add to cart</button>
             <h3 id="fullDesc">See full description <i class="fas fa-arrow-down"></i></h3>

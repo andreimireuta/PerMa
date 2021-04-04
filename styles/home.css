@@ -181,15 +181,16 @@ body{
     background-color:#333;
     height: 30vh;
     position: absolute;
-    top:87px;
+    /*top:5.4em;*/
+    top:100%;
     display: none;
-    right: 350px;
+    right:23%;
 }
 #sign-out{
     color: sienna;
     position: relative;
-    top: 75%;
-    left: 70%;
+    top: 70%;
+    left: 60%;
 }
 .account-item{
     font-size: 18px;

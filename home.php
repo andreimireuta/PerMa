@@ -38,20 +38,20 @@
         <ul class="nav-links">
             <li>
                 <i class="fas fa-home"></i>
-                <a href="">Home</a>
+                <a href="home.php">Home</a>
             </li>
             <li>
                 <i class="fas fa-user"></i>
                 <a href="" id="account-link">Account</a>
                 <div id="account-show">
-                <a href="#" class="account-item">WatchList</a>
-                <a href="#" class="account-item">Favourite List</a>
-                <a href="#" class="account-item" id="sign-out">Sign out</a>
+                    <a href="#" class="account-item">WatchList</a>
+                    <a href="#" class="account-item">Favourite List</a>
+                    <a href="#" class="account-item" id="sign-out">Sign out</a>
                 </div>
             </li>
             <li>
                 <i class="fas fa-shopping-cart"></i>
-                <a href="" id="cart-link">Cart</a>
+                <a href="cart.php" id="cart-link">Cart</a>
                 <div id="cart-show">
 
                 </div>
