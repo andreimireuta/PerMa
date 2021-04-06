@@ -30,6 +30,10 @@
                 <a href="home.php">Home</a>
             </li>
             <li>
+                <i class="fas fa-search"></i>
+                <a href="shop.php">Shop</a>
+            </li>
+            <li>
                 <i class="fas fa-user"></i>
                 <a href="" id="account-link">Account</a>
                 <div id="account-show">
@@ -171,7 +175,7 @@
     
 
     <script src="js_scripts/cart.js"></script>
-    <script src="js_scripts/home.js"></script>
+    <script src="js_scripts/shop.js"></script>
 </body>
 
 </html>

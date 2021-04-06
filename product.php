@@ -107,7 +107,7 @@
     
 
     <script src="js_scripts/product.js"></script>
-    <script src="js_scripts/home.js"></script>
+    <script src="js_scripts/shop.js"></script>
 </body>
 
 </html>

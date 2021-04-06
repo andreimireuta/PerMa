@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="styles/thankyou.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/shop.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="styles/thankyou.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
@@ -17,12 +17,11 @@
 </head>
 
 <body>
-    <nav class="navbar">
+     <nav class="navbar">
 
         <div class="logo" id="logo">
-                <img src="images/fragrance.png" alt="" class="logo-img">
-                <h4 class="logo-title">FIN</h4>
-            
+            <img src="images/fragrance.png" alt="" class="logo-img">
+            <h4 class="logo-title">FIN</h4>
         </div>
         <ul class="nav-links">
             <li>
@@ -30,15 +29,21 @@
                 <a href="home.php">Home</a>
             </li>
             <li>
+            <i class="fas fa-search"></i>
+                <a href="shop.php">Shop</a>
+            </li>
+            <li>
                 <i class="fas fa-user"></i>
                 <a href="" id="account-link">Account</a>
                 <div id="account-show">
-                    <a href="#" id="sign-out">Sign out</a>
+                    <a href="#" class="account-item">WatchList</a>
+                    <a href="#" class="account-item">Favourite List</a>
+                    <a href="#" class="account-item" id="sign-out">Sign out</a>
                 </div>
             </li>
             <li>
                 <i class="fas fa-shopping-cart"></i>
-                <a href="" id="cart-link">Cart</a>
+                <a href="cart.php" id="cart-link">Cart</a>
                 <div id="cart-show">
 
                 </div>
@@ -61,7 +66,7 @@
     
 
     <script src="js_scripts/thankyou.js"></script>
-    <script src="js_scripts/home.js"></script>
+    <script src="js_scripts/shop.js"></script>
 </body>
 
 </html>

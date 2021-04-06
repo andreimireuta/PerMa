@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="styles/checkout.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/shop.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="styles/checkout.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
@@ -28,6 +28,10 @@
             <li>
                 <i class="fas fa-home"></i>
                 <a href="home.php">Home</a>
+            </li>
+            <li>
+                <i class="fas fa-search"></i>
+                <a href="shop.php">Shop</a>
             </li>
             <li>
                 <i class="fas fa-user"></i>
@@ -142,7 +146,7 @@
     
 
     <script src="js_scripts/checkout.js"></script>
-    <script src="js_scripts/home.js"></script>
+    <script src="js_scripts/shop.js"></script>
 </body>
 
 </html>
