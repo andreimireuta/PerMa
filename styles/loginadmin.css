@@ -1,0 +1,21 @@
+.toggle-button-adm{
+    width: 75%;
+    padding: 10px 25px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    background: linear-gradient(to right,#222, rgb(48, 43, 43));
+    border-radius: 10px;
+    color: #fff;
+}
+.submit-button-adm{
+    width: 55%;
+    padding: 10px 25px;
+    cursor: pointer;
+    display: block;
+    margin-left:30%;
+    margin-top: 55px;
+    background: linear-gradient(to right,#222, rgb(48, 43, 43));
+    border-radius: 25px;
+    color: #fff;
+}
