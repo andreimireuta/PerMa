@@ -77,7 +77,7 @@
     </script>
     <div class="registerErrors">
         <?php
-        include('php_scripts/registerErrors.php');
+       //include('php_scripts/registerErrors.php');
         include('php_scripts/registerProcess.php');
     ?>
     </div>

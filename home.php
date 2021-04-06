@@ -41,6 +41,10 @@
                 <a href="home.php">Home</a>
             </li>
             <li>
+            <i class="fas fa-search"></i>
+                <a href="home.php">Shop</a>
+            </li>
+            <li>
                 <i class="fas fa-user"></i>
                 <a href="" id="account-link">Account</a>
                 <div id="account-show">

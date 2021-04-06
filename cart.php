@@ -164,7 +164,7 @@
                 <h1 class="price-total">360.00$</h1>
             </span>
             <span class="finalizare-comanda">
-                <button>Finalizeaza comanda</button>
+                <a href="checkout.php">Continuare comanda</a>
             </span>
        </div>
     </div>

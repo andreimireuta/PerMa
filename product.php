@@ -37,7 +37,7 @@
             </li>
             <li>
                 <i class="fas fa-shopping-cart"></i>
-                <a href="" id="cart-link">Cart</a>
+                <a href="cart.php" id="cart-link">Cart</a>
                 <div id="cart-show">
 
                 </div>

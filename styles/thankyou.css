@@ -1,0 +1,35 @@
+.main-container{
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 400px;
+    margin: auto;
+    margin-top: 15%;
+    background-color: lightgrey;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.main-container h2{
+    position: relative;
+    top: 10%;
+}
+.main-container p{
+    position: relative;
+    top: 20%;
+}
+.main-container a{
+    background-color: sienna;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.6s all ease;
+    position: relative;
+    left: 0%;
+    top: 65%;
+}
