@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = "";
-    $email = "";
+    $password= "";
     $errorrs = array();
 
     //connect to theb database

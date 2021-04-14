@@ -18,11 +18,11 @@
             <h3 class="toggle-button-adm">Admin Log In</h3> 
         </div>
 
-        <form class="input-group" action="php_scripts/loginProcess.php"  id="login" method="POST">
+        <form class="input-group" action="php_scripts/loginAdmin.php"  id="login" method="POST">
             
             <div class="input">
                 <i class="fas fa-user" aria-hidden="false"></i>
-                <input type="text" name="username" class="input-field" placeholder=" Admin username" required>
+                <input type="text" name="adminname" class="input-field" placeholder=" Admin username" required>
             </div>
             <div class="input">
                 <i class="fas fa-lock"></i>
