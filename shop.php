@@ -71,11 +71,11 @@
 
 
     <div class="container-poze">
-       <h1>Parfumuri pentru femei</h1>
+       <h1>Parfumuri pentru barbati</h1>
        <div class="row">
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/1.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs WatchList" title="WatchList"><i class="fa fa-eye" onclick="MyFunction()" id="fa-eye"></i></button>
                         <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart" onclick="this.style.color='red'"></i></button>
@@ -93,7 +93,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/2.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs WatchList" title="WatchList"><i onmouseover="this.style.color='black'" onmouseout="this.style.color='white'" class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -111,7 +111,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+                    <a href="product.php"><img src="images/products/3.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -129,7 +129,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/4.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -147,7 +147,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/5.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -165,7 +165,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/6.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -183,7 +183,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/7.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -201,7 +201,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/8.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -218,7 +218,7 @@
                </div>
            </div> <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/9.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -236,7 +236,7 @@
            </div>
            <div class="container-produs">
                <div class="produs">
-               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a> 
+               <a href="product.php"><img src="images/products/9.png" alt=""></a> 
                     <div class="overlay"> 
                         <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
                         <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
@@ -270,13 +270,208 @@
                    <h3>$500.00</h3>
                </div>
            </div>
-           
-           <br>
+       </div>
 
+       <h1>Parfumuri pentru femei</h1>
 
-           <h1>Parfumuri pentru barbati</h1>
-          
-
+       <div class="row">
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/10.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs WatchList" title="WatchList"><i class="fa fa-eye" onclick="MyFunction()" id="fa-eye"></i></button>
+                        <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart" onclick="this.style.color='red'"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/11.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs WatchList" title="WatchList"><i onmouseover="this.style.color='black'" onmouseout="this.style.color='white'" class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+                    <a href="product.php"><img src="images/products/12.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs like unlike" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/13.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/14.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/15.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/16.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/17.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div> <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/18.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/products/9.png" alt=""></a> 
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
+           <div class="container-produs">
+               <div class="produs">
+               <a href="product.php"><img src="images/image_wallpaper1.jpg" alt=""></a>    
+                    <div class="overlay"> 
+                        <button type="button" class="button-produs" title="WatchList"><i class="fa fa-eye"></i></button>
+                        <button type="button" class="button-produs" title="FavoriteList"><i class="fa fa-heart"></i></button>
+                        <button type="button" class="button-produs" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+               </div>
+               <div class="produs-info">
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star"></i>
+                   <i class="fa fa-star-half"></i>
+                   <h2>Parfum dama Versace</h2>
+                   <h3>$500.00</h3>
+               </div>
+           </div>
        </div>
     </div>
 
