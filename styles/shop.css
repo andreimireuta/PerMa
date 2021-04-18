@@ -123,17 +123,21 @@ body{
 .produs-info{
     text-align:left;
     line-height: 1.2;
+    max-width: 80%;
+    padding:10px;
 }
 .produs-info .fa{
     color: orange;
+    padding:2px;
     font-size: 15px;
+    margin-bottom: 10px;
 }
 .produs-info h2{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
 }
 .produs-info h3{
-    font-size: 18px;
+    font-size: 24px;
     padding: 5px;
     padding-bottom: 10px;
 }
@@ -213,6 +217,7 @@ body{
     height: 100%;
     max-height: 300px;
 }
+
 
 
 

@@ -34,12 +34,9 @@ $(document).ready(function(){
     });
 
     //pentru a face inima de wishlist rosie
-    var clickedWishlist = document.getElementById('fa-eye');
+    var clickedWishlist = document.getElementsByTagName("i");
     clickedWishlist.addEventListener('mousedown',function(){
         clickedWishlist.style.color='red';
         console.log("merge baaaaaa!");
     })
-    function MyFunction(){
-        clickedWishlist.style.color="red";
-    }
 });

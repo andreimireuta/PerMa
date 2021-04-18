@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+$mysql = new mysqli (
+	'localhost', // locatia serverului (aici, masina locala)
+	'root',       // numele de cont
+	'',    // parola (atentie, in clar!)
+	'parfumes'   // baza de date
+	);
+
+// verificam daca am reusit
+if (mysqli_connect_errno()) {
+	die ('ERROR: Could not connect.');
+}
+?>
 <html lang="en">
 
 <head>
@@ -49,16 +62,20 @@
             <div class="line3"></div>
         </div>
 
-    </nav>
-
-
-
+</nav>
     <div class="container-produs">
+    <?php
+                $produs = $_REQUEST["produs"];
+                if (!($rez = $mysql->query ('select id,denumire,descriere,compozitie,categorie,pret from products where id='.$produs))) {
+                    die ('A survenit o eroare la interogare');
+                }
+                while ($inreg = $rez->fetch_assoc()) {
+                    echo('
        <div class="product-image">
-            <img class="image-pr1" src="images/image_wallpaper1.jpg" alt="">
+            <img class="image-pr1" src="images/products/'.$inreg['id'].'.png" alt="">
        </div>
         <div class="product-info">
-            <h1>Parfum femeie Versace</h1>
+            <h1>'.$inreg['denumire'].'</h1>
             <p>cod produs: ETCETC100</p>
             <p><span class="bold-title-info">Opinia clientilor:</span>
             <span class="stars">
@@ -92,20 +109,16 @@
     </div>
     <div id="product-description">
                 <span class="bold-title-info"><h2>Despre brand:</h2></span> <br>
-                Brandul Calvin Klein este un brand de lifestyle si una dintre cele mai importante case de moda din America.
-                <br>
-                Look-ul Calvin este simplu si clasic cu influente minimaliste. Gamele de parfumuri Calvin Klein sunt atragatoare in aceeasi masura pentru femei si pentru barbati, cu un spirit modern.
-                <br>
-                Exoticul Euphoria este un parfum floral-fructat, cu o aroma imbatatoare, orientala, plina de fructe exotice, flori de orhidee neagra, violete.
+                '.$inreg['descriere'].'
                 <br><br>
                 <ul><span class="bold-title-info"><h2>Compozitie:</h2></span>
-                    <li><span class="bold-title-info">  Note de varf: </span>tonuri verzi, curmal japonez, rodie;</li>
-                    <li><span class="bold-title-info">  Note de mijloc: </span>lotus, orhidee;</li>
-                    <li><span class="bold-title-info">  Note de baza: </span>mosc, tonuri de crema, chihlimbar, violeta, mahon.</li>
+                    '.$inreg['compozitie'].'
                 </ul>
     </div>
-    
+    ');
+                }
 
+    ?>
     <script src="js_scripts/product.js"></script>
     <script src="js_scripts/shop.js"></script>
 </body>
