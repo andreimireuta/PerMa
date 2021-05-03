@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    if(isset($_COOKIE['username']) && !empty($_COOKIE['username'])){
+        header('Location: account.php');
+    }
+
+    if (isset($_POST['email']) && !empty($_POST['email'])) {
+        $_SESSION['email'] = $_POST['email'];
+    } else {
+        $_SESSION['email'] = "";
+    }
+
+    if (isset($_POST['password']) && !empty($_POST['password'])) {
+        $_SESSION['password'] = $_POST['password'];
+    } else {
+        $_SESSION['password'] = "";
+    }
+
+?>
 <html lang="en">
 
 <head>

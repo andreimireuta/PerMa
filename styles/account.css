@@ -1,0 +1,81 @@
+.container-principal{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navigation-ul{
+    position: relative;
+    width:20%;
+    padding-top: 2%;
+    height: 85vh;
+    max-height: 100vh;
+    background-color: #333;
+    transition: 0.8s all ease;
+    overflow:hidden;
+}
+.navigation-ul ul{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation-ul ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation-ul ul li:hover{
+    background-color:#999;
+}
+.navigation-ul ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation-ul ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation-ul ul li a .fas{
+    color: #fff;
+    font-size: 25px;
+}
+.navigation-ul ul li a .title,
+.navigation-ul ul li a .title button
+{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.mainc{
+    margin-top:2px ;
+    position: relative;
+    width: 81%;
+    height: 85vh;
+    min-height: 89vh;
+    background: whitesmoke;
+}
+.log_out{
+    border: none;
+    background-color: #333;
+    width: 100%;
+    color: #fff;
+    font-size: 17px;
+}
+.log_out:hover{
+    width: 100%;
+    background-color: #999;
+}

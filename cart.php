@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<?php
+session_start();
+$mysql = new mysqli (
+	'localhost', // locatia serverului (aici, masina locala)
+	'root',       // numele de cont
+	'',    // parola (atentie, in clar!)
+	'parfumes'   // baza de date
+	);
+
+// verificam daca am reusit
+if (mysqli_connect_errno()) {
+	die ('ERROR: Could not connect.');
+}
+?>
 <html lang="en">
 
 <head>
@@ -35,7 +49,7 @@
             </li>
             <li>
                 <i class="fas fa-user"></i>
-                <a href="" id="account-link">Account</a>
+                <a href="account.php" id="account-link">Account</a>
                 <div id="account-show">
                     <a href="#" id="sign-out">Sign out</a>
                 </div>
@@ -59,96 +73,53 @@
 
 
     <div class="container-produse">
-       <div class="container-produs">
+
+    <?php
+    /*
+    $link = mysqli_connect("localhost","root","","parfumes");
+
+    $sql = mysqli_prepare($link,"SELECT id from users where username like ? ");
+    mysqli_stmt_bind_param($sql,"s", $_COOKIE['userName']);
+    mysqli_stmt_execute($sql);
+    mysqli_stmt_bind_result ( $sql, $res1);
+    mysqli_stmt_fetch($sql);
+    //echo('Avem id client: '.$res1.'');
+*/
+
+    $idClient = $_COOKIE['userID'];
+
+    if (!($rez = $mysql->query ('select id,id_produs,denumire,pret,categorie,cantitate,id_client from cart '))) {
+        die ('A survenit o eroare la interogare');
+    }
+    while($inreg = $rez->fetch_assoc()){
+         
+      echo( '<div class="container-produs">
            <div class="imagine-titlu">
                 <div class="imagine">
-                    <img src="images/login_wallpaper.jpg" alt="">
+                    <img src="images/products/'.$inreg['id_produs'].'.png" alt="">
                 </div>
                 <span class="info">
-                        <p> Ar trebui sa vina titlul si o descirie scurta despre fiecare parfum in parte , ca un fel de mini rezumat al parfumului di nou</p>
+                        <p> '.$inreg['denumire'].'</p>
                     </span>
            </div>
            <div class="informatii">
            <span class="cantitate">
                     <h3>Cantitate:</h3>
-                    <input type="number" name="cantitate" id="cantitate">
+                    <input type="number" name="cantitate" id="cantitate" value='.$inreg['cantitate'].'>
                 </span>
                 <span class="pret-unitar">
                     <h3>Pret unitar:</h3>
-                    <p>150.00$</p>
+                    <p>'.$inreg['pret'].' lei</p>
                 </span>
                 <span class="pret-total">
                     <h3>Pret total:</h3>
-                    <p>300.00$</p>
+                    <p>'.$inreg['pret'] * $inreg['cantitate'].' lei</p>
                 </span>
            </div>
-       </div>
-       <div class="container-produs">
-            <div class="imagine-titlu">
-                <div class="imagine">
-                    <img src="images/LoginWallpaperFinal.jpg" alt="">
-                </div>
-                <span class="info">
-                        <p> Ar trebui sa vina titlul si o descirie scurta despre fiecare parfum in parte , ca un fel de mini rezumat al parfumului di nou</p>
-                        <br>
-                    </span>
-           </div>
-           <div class="informatii">
-                <span class="cantitate">
-                    <h3>Cantitate:</h3>
-                </span>
-                <span class="pret-unitar">
-                    <h3>Pret unitar:</h3>
-                </span>
-                <span class="pret-total">
-                    <h3>Pret total:</h3>
-                </span>
-           </div>
-       </div>
-       <div class="container-produs">
-            <div class="imagine-titlu">
-                <div class="imagine">
-                    <img src="images/LoginWallpaperFinal.jpg" alt="">
-                </div>
-                <span class="info">
-                        <p> Ar trebui sa vina titlul si o descirie scurta despre fiecare parfum in parte , ca un fel de mini rezumat al parfumului di nou</p>
-                        <br>
-                    </span>
-           </div>
-           <div class="informatii">
-                <span class="cantitate">
-                    <h3>Cantitate:</h3>
-                </span>
-                <span class="pret-unitar">
-                    <h3>Pret unitar:</h3>
-                </span>
-                <span class="pret-total">
-                    <h3>Pret total:</h3>
-                </span>
-           </div>
-       </div>
-       <div class="container-produs">
-            <div class="imagine-titlu">
-                <div class="imagine">
-                    <img src="images/LoginWallpaperFinal.jpg" alt="">
-                </div>
-                <span class="info">
-                        <p> Ar trebui sa vina titlul si o descirie scurta despre fiecare parfum in parte , ca un fel de mini rezumat al parfumului di nou</p>
-                        <br>
-                    </span>
-           </div>
-           <div class="informatii">
-                <span class="cantitate">
-                    <h3>Cantitate:</h3>
-                </span>
-                <span class="pret-unitar">
-                    <h3>Pret unitar:</h3>
-                </span>
-                <span class="pret-total">
-                    <h3>Pret total:</h3>
-                </span>
-           </div>
-       </div>
+       </div>');
+        }
+    ?>
+       
        <hr>
        <div class="checkout-info">
             <span class="total-price">

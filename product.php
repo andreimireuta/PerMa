@@ -42,11 +42,12 @@ if (mysqli_connect_errno()) {
                 <a href="home.php">Home</a>
             </li>
             <li>
+                <i class="fas fa-search"></i>
+                <a href="shop.php">Shop</a>
+            </li>
+            <li>
                 <i class="fas fa-user"></i>
-                <a href="" id="account-link">Account</a>
-                <div id="account-show">
-                    <a href="#" id="sign-out">Sign out</a>
-                </div>
+                <a href="account.php" id="account-link">Account</a>
             </li>
             <li>
                 <i class="fas fa-shopping-cart"></i>
@@ -84,24 +85,30 @@ if (mysqli_connect_errno()) {
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half"></i>
             </span>
-            <span id="price"><h2>USD $150.00</h2></span>
+            <span id="price"><h2>'.$inreg['pret'].' lei</h2></span>
             <p><span class="bold-title-info">Brand:</span>  Versace</p>
             <p><span class="bold-title-info">Colectie:</span>  Primavara</p>
             <p><span class="bold-title-info">Disponibilitate:</span>  In stoc</p>
-            <span class="cantitate">
-                <label for="marime"> <span class="bold-title-info">Selectati marimea:</span> </label>
-                <select type="number" name="marime" id="marime">
-                    <option value="50">50ml</option>
-                    <option value="100">100ml</option>
-                    <option value="200">200ml</option>
-                </select>
-            </span>
-            <br><br>
-            <span class="cantitate">
-                <label for="cantitate"> <span class="bold-title-info">Cantitate:</span> </label>
-                <input type="number" name="cantitate" id="cantitate" min="0" >
-            </span>
-            <button class="Add-to-cart" type="button">Add to cart</button>
+
+                <span class="cantitate">
+                    <label for="marime"> <span class="bold-title-info">Selectati marimea:</span> </label>
+                    <select type="number" name="marime" id="marime">
+                        <option value="50">50ml</option>
+                        <option value="100">100ml</option>
+                        <option value="200">200ml</option>
+                    </select>
+                </span>
+                <br><br>
+
+            <form action="php_scripts/addToCart.php" method="post">
+                <span class="cantitate">
+                    <label for="cantitate"> <span class="bold-title-info">Cantitate:</span> </label>
+                    <input type="number" name="cantitate" id="cantitate" min="0">
+                    <input type="hidden" value='.$inreg['id'].' name="nameid" id="nameid">
+                </span>
+                <button class="Add-to-cart" type="submit">Add to cart</button>
+            </form >
+
             <h3 id="fullDesc">See full description <i class="fas fa-arrow-down"></i></h3>
             <h3 id="fullDesc1">Hide full description <i class="fas fa-arrow-up"></i></h3>
 

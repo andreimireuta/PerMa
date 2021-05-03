@@ -58,7 +58,7 @@ if (mysqli_connect_errno()) {
             </li>
             <li>
                 <i class="fas fa-user"></i>
-                <a href="" id="account-link">Account</a>
+                <a href="account.php" id="account-link">Account</a>
                 <div id="account-show">
                     <a href="#" class="account-item">WatchList</a>
                     <a href="#" class="account-item">Favourite List</a>

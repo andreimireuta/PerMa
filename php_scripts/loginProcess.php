@@ -29,8 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $reuslt = mysqli_query($mysqli,$query);
         if(mysqli_num_rows($reuslt) == 1){
             //log user in
+
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now loged in";
+            setcookie("userName", $username, time()+(86400*30), "/");
             echo "salut $username";
             header('location: ../home.php');
         }
