@@ -145,7 +145,7 @@ hr{
     width: 25%;
     position: relative;
 }
-.finalizare-comanda a{
+.finalizare-comanda button{
     background-color: sienna;
     border: none;
     border-radius: 10px;

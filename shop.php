@@ -9,6 +9,7 @@
 
 <!DOCTYPE html>
 <?php
+session_start();
 $mysql = new mysqli (
 	'localhost', // locatia serverului (aici, masina locala)
 	'root',       // numele de cont

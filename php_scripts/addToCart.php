@@ -30,11 +30,9 @@
     mysqli_stmt_execute($sql);
     mysqli_stmt_bind_result ( $sql, $res1);
     mysqli_stmt_fetch($sql);
-    echo('Avem id client: '.$res1.'');
-
-    //creare cookie id client
-    $cookie_name = "userID";
-    setcookie($cookie_name,$res1,time() + (86400 * 30), "/");
+    //echo('Avem id client: '.$res1.'');
+    //$cookie_name = "userID";
+    //setcookie($cookie_name,$res1,time() + (86400 * 30), "/");
 
     /*
     $sql1 = mysqli_prepare($link,"SELECT denumire, categorie, pret from products where id = ?");

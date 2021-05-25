@@ -29,6 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $reuslt = mysqli_query($mysqli,$query);
         if(mysqli_num_rows($reuslt) == 1){
             //log user in
+            //$sql1 = "SELECT id from users where username ='$username'";
+            //$res1 = mysqli_query($mysqli,$sql1);
+
+             //creare cookie id client
+            //$cookie_name = "userID";
+            //setcookie($cookie_name,$res1,time() + (86400 * 30), "/");
 
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now loged in";
@@ -38,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else{
             echo "Wrong username/password";
+            echo "Please try again";
         }
     }
 }

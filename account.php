@@ -50,7 +50,8 @@ if (mysqli_connect_errno()) {
                     if(isset($_COOKIE['userName']) && !empty($_COOKIE['userName']))
                         echo('Hi, '.$_COOKIE['userName']);
                     else{
-                        echo('Sign in');
+                        echo('<a href="login.php">Sign in</a>');
+                        
                         //header('location: login.php');
                     }
                     ?>

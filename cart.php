@@ -71,11 +71,10 @@ if (mysqli_connect_errno()) {
     </nav>
 
 
-
+    <form method="POST" action="checkout.php">
     <div class="container-produse">
 
     <?php
-    /*
     $link = mysqli_connect("localhost","root","","parfumes");
 
     $sql = mysqli_prepare($link,"SELECT id from users where username like ? ");
@@ -84,15 +83,21 @@ if (mysqli_connect_errno()) {
     mysqli_stmt_bind_result ( $sql, $res1);
     mysqli_stmt_fetch($sql);
     //echo('Avem id client: '.$res1.'');
-*/
+
+    $cookie_name = "userID";
+    setcookie($cookie_name,$res1,time() + (86400 * 30), "/");
+
+    $total_value = 0;
+    $total_cant=0;
 
     $idClient = $_COOKIE['userID'];
 
-    if (!($rez = $mysql->query ('select id,id_produs,denumire,pret,categorie,cantitate,id_client from cart '))) {
+    if (!($rez = $mysql->query ('select id,id_produs,denumire,pret,categorie,cantitate,id_client from cart where id_client = '.$idClient.''))) {
         die ('A survenit o eroare la interogare');
     }
     while($inreg = $rez->fetch_assoc()){
-         
+         $total_value = $total_value + $inreg['cantitate'] * $inreg['pret'] ;
+         $total_cant += $inreg['cantitate'];
       echo( '<div class="container-produs">
            <div class="imagine-titlu">
                 <div class="imagine">
@@ -124,25 +129,47 @@ if (mysqli_connect_errno()) {
        <div class="checkout-info">
             <span class="total-price">
                 <h2>Cost produse:</h2>
-                <h2 class="price-checkout"> 350.00$</h2>
+                <h2 class="price-checkout"><?php echo $total_value; ?> de lei</h2>
             </span>
             <span class="total-cumparate">
                 <h2>Produse cumparate: </h2>
-                <h2>6</h2>
+                <h2><?php echo $total_cant; ?></h2>
             </span>
             <span class="cost-transport">
                 <h2>Cost transport: </h2>
-                <h2>10$</h2>
+                <h2>
+                    <?php 
+                    $transport=0;
+                        if($total_value <=500)
+                        {
+                            echo "20 lei";
+                            $transport = 20;
+                        }
+                        else{
+                            echo " gratuit";
+
+                        }
+                            
+                
+                    ?>
+                </h2>
             </span>
             <span class="total-checkout">
-                <h1>Total produse cumparate:</h1>
-                <h1 class="price-total">360.00$</h1>
+                <h1>Total de plata:</h1>
+                <h1 class="price-total">
+                <?php 
+                    echo $transport + $total_value;        
+                
+                ?>
+                de lei</h1>
             </span>
             <span class="finalizare-comanda">
-                <a href="checkout.php">Continuare comanda</a>
+                <button type="submit">Continuare comanda</button>
             </span>
+
        </div>
     </div>
+    </form>
     
 
     <script src="js_scripts/cart.js"></script>
