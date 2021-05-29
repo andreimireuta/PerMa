@@ -42,7 +42,7 @@ if (mysqli_connect_errno()) {
 </head>
 
 <body>
-      <nav class="navbar">
+    <nav class="navbar">
 
         <div class="logo" id="logo">
             <img src="images/fragrance.png" alt="" class="logo-img">
@@ -84,9 +84,9 @@ if (mysqli_connect_errno()) {
 
 
     <div class="container-poze">
-       <h1>Parfumuri pentru barbati</h1>
-       <div class="row">
-       <?php
+        <h1>Parfumuri pentru barbati</h1>
+        <div class="row">
+            <?php
                 if (!($rez = $mysql->query ('select id,denumire,pret,categorie from products'))) {
                     die ('A survenit o eroare la interogare');
                 }
@@ -118,11 +118,27 @@ if (mysqli_connect_errno()) {
            ?>
 
 
-           
-       </div>
-    </div>
 
-    
+        </div>
+    </div>
+    <footer id="footer">
+        <div id="bottom">
+            <div class="scholarly">
+                <a href="#">Scholarly HTML</a>
+            </div>
+            <span id="line1"> | </span>
+            <div class="contact">
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <span id="line2">
+            Created by Andrei Mireuta & Adrian Cojocaru
+        </span>
+
+
+    </footer>
+
+
 
     <script src="js_scripts/shop.js">
 

@@ -111,6 +111,7 @@ if (mysqli_connect_errno()) {
            <span class="cantitate">
                     <h3>Cantitate:</h3>
                     <input type="number" name="cantitate" id="cantitate" value='.$inreg['cantitate'].'>
+                    
                 </span>
                 <span class="pret-unitar">
                     <h3>Pret unitar:</h3>
@@ -170,6 +171,22 @@ if (mysqli_connect_errno()) {
        </div>
     </div>
     </form>
+    <footer id="footer">
+        <div id="bottom">
+            <div class="scholarly">
+                <a href="#">Scholarly HTML</a>
+            </div>
+            <span id="line1"> | </span>
+            <div class="contact">
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <span id="line2">
+            Created by Andrei Mireuta & Adrian Cojocaru
+        </span>
+
+
+    </footer>
     
 
     <script src="js_scripts/cart.js"></script>

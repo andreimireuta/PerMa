@@ -20,9 +20,9 @@
     <nav class="navbar">
 
         <div class="logo" id="logo">
-                <img src="images/fragrance.png" alt="" class="logo-img">
-                <h4 class="logo-title">FIN</h4>
-            
+            <img src="images/fragrance.png" alt="" class="logo-img">
+            <h4 class="logo-title">FIN</h4>
+
         </div>
         <ul class="nav-links">
             <li>
@@ -35,10 +35,7 @@
             </li>
             <li>
                 <i class="fas fa-user"></i>
-                <a href="" id="account-link">Account</a>
-                <div id="account-show">
-                    <a href="#" id="sign-out">Sign out</a>
-                </div>
+                <a href="account.php" id="account-link">Account</a>
             </li>
             <li>
                 <i class="fas fa-shopping-cart"></i>
@@ -58,9 +55,9 @@
 
 
     <div class="checkout-container">
-       <h1>Completati urmatoarele campuri pentru a finaliza comanda</h1>
-       <p>Trebuie sa ne gandim la un text pe care sa il punem aici</p>
-       <div class="rand">
+        <h1>Completati urmatoarele campuri pentru a finaliza comanda</h1>
+        <p>Trebuie sa ne gandim la un text pe care sa il punem aici</p>
+        <div class="rand">
             <div class="col-80">
                 <div class="container">
                     <form action="">
@@ -69,25 +66,25 @@
                                 <h3>Billing Address</h3>
 
                                 <label for="fname"><i class="fa fa-user"></i>Full Name</label>
-                                <input type="text" id="fname" name="fname" placeholder="Popescu Ion" >
+                                <input type="text" id="fname" name="fname" placeholder="Popescu Ion">
 
                                 <label for="email"><i class="fa fa-envelope"></i>Email</label>
-                                <input type="email" name="email" id="email" placeholder="popescuion@exemplu.com" >
+                                <input type="email" name="email" id="email" placeholder="popescuion@exemplu.com">
 
                                 <label for="adress"><i class="fas fa-address-card"></i>Address</label>
-                                <input type="text" name="address" id="address" placeholder="Bvd. Independentei nr.1" >
+                                <input type="text" name="address" id="address" placeholder="Bvd. Independentei nr.1">
 
                                 <label for="city"><i class="fas fa-city"></i>City</label>
-                                <input type="text" id="city" name="city" placeholder="Iasi" >
+                                <input type="text" id="city" name="city" placeholder="Iasi">
 
                                 <div class="rand">
                                     <div class="col-50">
                                         <label for="judet">Judet</label>
-                                        <input type="text" id="judet" name="judet" placeholder="Iasi" >
+                                        <input type="text" id="judet" name="judet" placeholder="Iasi">
                                     </div>
                                     <div class="col-50">
                                         <label for="cod-postal">Cod postal</label>
-                                        <input type="text" id="cod-postal" name="cod-postal" placeholder="Iasi" >
+                                        <input type="text" id="cod-postal" name="cod-postal" placeholder="Iasi">
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +106,7 @@
 
                                 <label for="expmonth">Exp Month</label>
                                 <input type="text" id="expmonth" name="expmonth" placeholder="10 / Octomber">
-                                
+
                                 <div class="rand">
                                     <div class="col-50">
                                         <label for="expyear">Exp Year</label>
@@ -123,7 +120,8 @@
                             </div>
                         </div>
                         <label for="">
-                                <input type="checkbox" checked="checked" name="sameaddress"> Livreaza la aceeasi adresa de plata
+                            <input type="checkbox" checked="checked" name="sameaddress"> Livreaza la aceeasi adresa de
+                            plata
                         </label>
                         <button type="submit" value="Plaseaza comanda" class="button">Plaseaza comanda</button>
                     </form>
@@ -132,18 +130,35 @@
             </div>
             <div class="col-20">
                 <div class="container">
-                    <h4>Cart <span class="price" style="color: red;"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-                        <p><a href="#">Product 1</a><span class="price">50$</span></p>
-                        <p><a href="#">Product 2</a><span class="price">60$</span></p>
-                        <p><a href="#">Product 3</a><span class="price">70$</span></p>
-                        <p><a href="#">Product 4</a><span class="price">80$</span></p>
-                        <hr>
-                        <p>Total: <span class="price"><b>260$</b></span></p>
+                    <h4>Cart <span class="price" style="color: red;"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
+                    </h4>
+                    <p><a href="#">Product 1</a><span class="price">50$</span></p>
+                    <p><a href="#">Product 2</a><span class="price">60$</span></p>
+                    <p><a href="#">Product 3</a><span class="price">70$</span></p>
+                    <p><a href="#">Product 4</a><span class="price">80$</span></p>
+                    <hr>
+                    <p>Total: <span class="price"><b>260$</b></span></p>
                 </div>
             </div>
-       </div>
+        </div>
     </div>
-    
+    <footer id="footer">
+        <div id="bottom">
+            <div class="scholarly">
+                <a href="#">Scholarly HTML</a>
+            </div>
+            <span id="line1"> | </span>
+            <div class="contact">
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <span id="line2">
+            Created by Andrei Mireuta & Adrian Cojocaru
+        </span>
+
+
+    </footer>
+
 
     <script src="js_scripts/checkout.js"></script>
     <script src="js_scripts/shop.js"></script>
