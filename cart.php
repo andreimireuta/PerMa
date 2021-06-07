@@ -169,6 +169,7 @@ if (mysqli_connect_errno()) {
                 de lei</h1>
             </span>
             <span class="finalizare-comanda">
+                <>
                 <button type="submit">Continuare comanda</button>
             </span>
 

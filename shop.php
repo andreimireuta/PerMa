@@ -124,7 +124,7 @@ if (mysqli_connect_errno()) {
     <footer id="footer">
         <div id="bottom">
             <div class="scholarly">
-                <a href="#">Scholarly HTML</a>
+                <a href="Scholarly.php">Scholarly HTML</a>
             </div>
             <span id="line1"> | </span>
             <div class="contact">
