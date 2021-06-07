@@ -147,8 +147,8 @@ if(mysqli_num_rows($rez5) > 0){
                     <table>
                     <thead>
                         <tr>
-                            <td>Name</td>
-                            <td>Price</td>
+                            <td>Nume client</td>
+                            <td>Pret comanda</td>
                             <td>Nr. comanda</td>
                             <td>Payment</td>
                             <td>Status</td>
@@ -157,12 +157,12 @@ if(mysqli_num_rows($rez5) > 0){
                     <tbody>
                         <?php 
                             $produs = 0;
-                            if (!($rez = $mysql->query ('select id,denumire,categorie,pret_total,id_client from comenzi where cod_postal='.$produs))) {
+                            if (!($rez = $mysql->query ('select id,denumire,categorie,pret_total,id_client,nume_client from comenzi where cod_postal='.$produs))) {
                                 die ('A survenit o eroare la interogare');
                             }
                             while ($inreg = $rez->fetch_assoc()) {
                                 echo('  <tr>
-                                            <td>'.$inreg['denumire'].'</td>
+                                            <td>'.$inreg['nume_client'].'</td>
                                             <td>'.$inreg['pret_total'].'</td>
                                             <td>'.$inreg['id'].'</td>
                                             <td>Paid</td>

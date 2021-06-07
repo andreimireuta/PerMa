@@ -102,14 +102,16 @@ if (mysqli_connect_errno()) {
                     </a>
                 </li>
                 <li>
-                    <form method="POST">
-                        <a href="#">
+                    <!-- <form method="POST"> -->
+                        <a href="login.php">
                             <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
-                            <span class="title"><button name="log_out" class="log_out">Sign out</button></span>
+                            <span class="title">
+                                <button name="log_out" class="log_out" value="log_out" >Sign out</button>
+                            </span>
                         </a>
-                    </form>
+                    <!-- </form> -->
                 </li>
-            </ul>
+                </ul>
         </div>
         <div class="mainc">
                     <div id="option11">
@@ -131,7 +133,7 @@ if (mysqli_connect_errno()) {
                                     <label for="male" class="gender">Barbat</label>
                                     <br>
                                     <input type="radio" name="gender" id="female" value="female">
-                                    <label for="female" class="gender">Female</label>
+                                    <label for="female" class="gender">Femeie</label>
                                     <br>
                                     <button type="submit">Submit</button>
                                 </form>
@@ -197,11 +199,13 @@ if (mysqli_connect_errno()) {
 
 </html>
 <?php
-    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// function log_out(){
+     //if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if( isset($_POST['log_out'])){
 			setcookie("userName", "", time()+(86400*30), "/");
 
 			Header('Location: login.php');
 		}
-	// } 
+	 //} 
+    // }
 ?>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="col-50">
                                         <label for="cod-postal">Cod postal</label>
-                                        <input type="text" id="cod-postal" name="cod-postal" placeholder="Iasi">
+                                        <input type="text" id="cod-postal" name="cod-postal" placeholder="Iasi" value="0">
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
                 </div>
             </div>
 
-            <div class="col-20">
+            <!-- <div class="col-20">
                 <div class="container">
                     <h4>Cart <span class="price" style="color: red;"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
                     </h4>
@@ -157,7 +157,7 @@
                     <hr>
                     <p>Total: <span class="price"><b>260$</b></span></p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <footer id="footer">

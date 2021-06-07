@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if(mysqli_query($mysqli,$sql)){
                 $_SESSION['username'] = $username;
                 $_SESSION['success'] = "You are now logged in ";
-                header('location: ../home.php'); //redirectionarea catre home page
+                header('location: ../login.php'); //redirectionarea catre home page
                 $mysqli -> close();
             }
             else{

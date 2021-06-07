@@ -23,6 +23,8 @@ $link = mysqli_connect("localhost","root","","parfumes");
 
 $query = ("SELECT * from cart where id_client='$idClient'");
 $result = mysqli_query($link,$query);
+$numeClient= $_COOKIE['userName'];
+echo $numeClient;
 
 if(mysqli_num_rows($result) > 0){
     while($row = mysqli_fetch_assoc($result)){
@@ -38,8 +40,12 @@ if(mysqli_num_rows($result) > 0){
     echo "Nu a mers, 0 linii returnate";
 }
 
-$query1 = ("INSERT INTO comenzi(id_produs,categorie,pret,cantitate,id_client,pret_total,denumire) VALUES ('$idP','$cat','$pret','$cant','$idClient','$total','$den') ");
+$query1 = ("INSERT INTO comenzi(id_produs,categorie,pret,cantitate,id_client,pret_total,denumire,nume_client) VALUES ('$idP','$cat','$pret','$cant','$idClient','$total','$den','$numeClient') ");
 mysqli_query($link,$query1);
+
+//stergem din tabela cart detaliile comenzii
+$query2= ("DELETE FROM cart where id_client='$idClient'");
+mysqli_query($link,$query2);
 
 
 echo $_SESSION["totalComanda"];
