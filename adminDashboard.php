@@ -1,4 +1,41 @@
 <!DOCTYPE html>
+<?php
+$total_vanzari = 0;
+$comenzi=0;
+$useri=0;
+session_start();
+$mysql = new mysqli (
+	'localhost', // locatia serverului (aici, masina locala)
+	'root',       // numele de cont
+	'',    // parola (atentie, in clar!)
+	'parfumes'   // baza de date
+	);
+
+// verificam daca am reusit
+if (mysqli_connect_errno()) {
+	die ('ERROR: Could not connect.');
+}
+
+$rez1= ("SELECT pret_total from comenzi");
+$rez3= mysqli_query($mysql,$rez1);
+if(mysqli_num_rows($rez3) > 0){
+    while($row = mysqli_fetch_assoc($rez3)){
+        $preturi=$row["pret_total"];
+        $total_vanzari += $preturi;
+        $comenzi+=1;
+    }
+}
+$rez4= ("SELECT username,email from users");
+$rez5= mysqli_query($mysql,$rez4);
+if(mysqli_num_rows($rez5) > 0){
+    while($row = mysqli_fetch_assoc($rez5)){
+        $user=$row["username"];
+        $useri+=1;
+    }
+}
+// $total_vanzari +=$inreg['pret_total'];
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +65,7 @@
                     
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="admin/addToDB.php">
                         <span class="icon"><i class="fas fa-plus-square"></i></span>
                         <span class="title">Add new parfumes</span>
                     </a>
@@ -49,7 +86,7 @@
                     
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="loginadmin.php">
                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                         <span class="title">Sign out</span> 
                     </a>
@@ -73,8 +110,8 @@
             <div class="cardBox">
                 <div class="card">
                     <div>
-                        <span class="numbers">1,234</span>
-                        <span class="cardName">Views</span>
+                        <span class="numbers"><?php echo $useri ?></span>
+                        <span class="cardName">Useri</span>
                     </div>
                     <div class="iconBox">
                         <i class="fas fa-eye"></i>
@@ -82,8 +119,8 @@
                 </div>
                 <div class="card">
                     <div>
-                        <span class="numbers">123</span>
-                        <span class="cardName">Sales</span>
+                        <span class="numbers"><?php echo $comenzi ?></span>
+                        <span class="cardName">Comenzi</span>
                     </div>
                     <div class="iconBox">
                     <i class="fas fa-shopping-cart"></i>
@@ -91,8 +128,8 @@
                 </div>
                 <div class="card">
                     <div>
-                        <span class="numbers">$12,345</span>
-                        <span class="cardName">Earnings</span>
+                        <span class="numbers"><?php echo $total_vanzari ?> lei</span>
+                        <span class="cardName">Incasari</span>
                     </div>
                     <div class="iconBox">
                     <i class="fas fa-dollar-sign"></i>
@@ -112,130 +149,30 @@
                         <tr>
                             <td>Name</td>
                             <td>Price</td>
+                            <td>Nr. comanda</td>
                             <td>Payment</td>
                             <td>Status</td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
+                        <?php 
+                            $produs = 0;
+                            if (!($rez = $mysql->query ('select id,denumire,categorie,pret_total,id_client from comenzi where cod_postal='.$produs))) {
+                                die ('A survenit o eroare la interogare');
+                            }
+                            while ($inreg = $rez->fetch_assoc()) {
+                                echo('  <tr>
+                                            <td>'.$inreg['denumire'].'</td>
+                                            <td>'.$inreg['pret_total'].'</td>
+                                            <td>'.$inreg['id'].'</td>
+                                            <td>Paid</td>
+                                            <td><span class="status delivered">Delivered</span></td>
 
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status inprogress">In progress</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Waiting</td>
-                            <td><span class="status inprogress">In progress</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Versace Eros Women</td>
-                            <td>$300</td>
-                            <td>Paid</td>
-                            <td><span class="status return">Return</span></td>
-                            
-                        </tr>
+                                        </tr>
+                            '); 
+                          
+                        }
+                        ?>
                     </tbody>
                 </table>
 
@@ -249,38 +186,21 @@
                     </div>
                     <table>
                         <tbody>
-                            <tr>
-                                <td><i class="fas fa-user-circle"></i></td>
-                                <td><h4>Alex <br><span> david@gmail.com</span></h4></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-user-circle"></i></td>
-                                <td><h4>Alex <br><span> david@gmail.com</span></h4></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-user-circle"></i></td>
-                                <td><h4>Alex <br><span> david@gmail.com</span></h4></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-user-circle"></i></td>
-                                <td><h4>Alex <br><span> david@gmail.com</span></h4></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-user-circle"></i></td>
-                                <td><h4>Alex <br><span> david@gmail.com</span></h4></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-user-circle"></i></td>
-                                <td><h4>Alex <br><span> david@gmail.com</span></h4></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-user-circle"></i></td>
-                                <td><h4>Alex <br><span> david@gmail.com</span></h4></td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-user-circle"></i></td>
-                                <td><h4>Alex <br><span> david@gmail.com</span></h4></td>
-                            </tr>
+                            <?php
+                                $afisare=0;
+                                $rez10=('SELECT username,email FROM users');
+                                $rez11=mysqli_query($mysql,$rez10);
+                            while($row = $rez11->fetch_assoc()){
+                                if($afisare<8){
+                                    echo (' <tr>
+                                                <td><i class="fas fa-user-circle"></i></td>
+                                                <td><h4>'.$row['username'].' <br><span> '.$row['email'].'</span></h4></td>
+                                            </tr>') ;
+                                    
+                                    }
+                                }
+                                $afisare+=1;
+                            ?>
                         </tbody>
                     </table>
                 </div>

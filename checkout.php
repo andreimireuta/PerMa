@@ -39,7 +39,7 @@
             </li>
             <li>
                 <i class="fas fa-shopping-cart"></i>
-                <a href="" id="cart-link">Cart</a>
+                <a href="cart.php" id="cart-link">Cart</a>
                 <div id="cart-show">
 
                 </div>
@@ -56,20 +56,23 @@
 
     <div class="checkout-container">
         <h1>Completati urmatoarele campuri pentru a finaliza comanda</h1>
-        <p>Trebuie sa ne gandim la un text pe care sa il punem aici</p>
         <div class="rand">
             <div class="col-80">
                 <div class="container">
-                    <form action="">
+
+                    <form action="php_scripts/checkoutDB.php" method="POST">
                         <div class="rand">
                             <div class="col-50">
                                 <h3>Billing Address</h3>
 
                                 <label for="fname"><i class="fa fa-user"></i>Full Name</label>
-                                <input type="text" id="fname" name="fname" placeholder="Popescu Ion">
+                                <input type="text" id="fname" name="fname" placeholder="Popescu Ion"  >
 
                                 <label for="email"><i class="fa fa-envelope"></i>Email</label>
                                 <input type="email" name="email" id="email" placeholder="popescuion@exemplu.com">
+
+                                <label for="telephone"><i class="fas fa-phone-square-alt"></i>Phone number</label>
+                                <input type="text" name="telephone" id="telephone" placeholder="0711223344">
 
                                 <label for="adress"><i class="fas fa-address-card"></i>Address</label>
                                 <input type="text" name="address" id="address" placeholder="Bvd. Independentei nr.1">
@@ -90,7 +93,7 @@
                             </div>
                             <div class="col-50">
                                 <h3>Metode de plata</h3>
-                                <label for="fname"> Accepted Cards:</label>
+                                <label for="cardname"> Accepted Cards:</label>
 
                                 <span class="icon-container">
                                     <i class="fab fa-cc-visa" style="color: navy;"></i>
@@ -119,15 +122,30 @@
                                 </div>
                             </div>
                         </div>
-                        <label for="">
-                            <input type="checkbox" checked="checked" name="sameaddress"> Livreaza la aceeasi adresa de
-                            plata
+                        <label for="sameadress">
+                            <input type="checkbox" name="sameaddress" onclick="showDiv()" id="checkBox"> Livreaza la aceeasi adresa
                         </label>
-                        <button type="submit" value="Plaseaza comanda" class="button">Plaseaza comanda</button>
+                        <div class="col-50" id="destinatie">
+                            <h3>Shipping Address</h3>
+                            <label for="fname"><i class="fa fa-user"></i>Full Name</label>
+                                <input type="text" id="fname" name="fname" placeholder="Popescu Ion">
+
+                                <label for="telephone"><i class="fas fa-phone-square-alt"></i>Phone number</label>
+                                <input type="text" name="telephone" id="telephone" placeholder="0711223344">
+
+                                <label for="adress"><i class="fas fa-address-card"></i>Address</label>
+                                <input type="text" name="address" id="address" placeholder="Bvd. Independentei nr.1">
+
+                                <label for="city"><i class="fas fa-city"></i>City</label>
+                                <input type="text" id="city" name="city" placeholder="Iasi">
+                        </div>
+                        <div class="col-50"></div>
+                        <button type="submit" class="button">Plaseaza comanda</button>
                     </form>
-                    <a href="thankyou.php">mergi mai departe</a>
+                    
                 </div>
             </div>
+
             <div class="col-20">
                 <div class="container">
                     <h4>Cart <span class="price" style="color: red;"><i class="fa fa-shopping-cart"></i> <b>4</b></span>

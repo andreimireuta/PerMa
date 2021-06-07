@@ -103,7 +103,7 @@ if (mysqli_connect_errno()) {
             <form action="php_scripts/addToCart.php" method="post">
                 <span class="cantitate">
                     <label for="cantitate"> <span class="bold-title-info">Cantitate:</span> </label>
-                    <input type="number" name="cantitate" id="cantitate" min="0">
+                    <input type="number" name="cantitate" id="cantitate" min="1" >
                     <input type="hidden" value='.$inreg['id'].' name="nameid" id="nameid">
                 </span>
                 <button class="Add-to-cart" type="submit">Add to cart</button>

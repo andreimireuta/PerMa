@@ -14,6 +14,8 @@
     $produsul = $_REQUEST["cantitate"];
     $nume = $_POST['nameid'];
     $numeClient = $_COOKIE['userName'];
+    if($produsul == NULL)
+        $produsul = 1;
     echo('Avem cantitatea: '.$produsul.' ');
     echo('Avem produsul: '.$nume.' ');
 

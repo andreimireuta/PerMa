@@ -50,9 +50,6 @@ if (mysqli_connect_errno()) {
             <li>
                 <i class="fas fa-user"></i>
                 <a href="account.php" id="account-link">Account</a>
-                <div id="account-show">
-                    <a href="#" id="sign-out">Sign out</a>
-                </div>
             </li>
             <li>
                 <i class="fas fa-shopping-cart"></i>
@@ -98,6 +95,12 @@ if (mysqli_connect_errno()) {
     while($inreg = $rez->fetch_assoc()){
          $total_value = $total_value + $inreg['cantitate'] * $inreg['pret'] ;
          $total_cant += $inreg['cantitate'];
+         $cantitate=$inreg['cantitate'];
+         if($inreg['cantitate']==0)
+            $cantitate = 1;
+        
+
+
       echo( '<div class="container-produs">
            <div class="imagine-titlu">
                 <div class="imagine">
@@ -110,7 +113,8 @@ if (mysqli_connect_errno()) {
            <div class="informatii">
            <span class="cantitate">
                     <h3>Cantitate:</h3>
-                    <input type="number" name="cantitate" id="cantitate" value='.$inreg['cantitate'].'>
+                    <input type="number" name="cantitate" id="cantitate" min="0" value='.$cantitate.'>
+                    <a href="cart.php" id="refresh">Actualizeaza</a>
                     
                 </span>
                 <span class="pret-unitar">
@@ -119,7 +123,7 @@ if (mysqli_connect_errno()) {
                 </span>
                 <span class="pret-total">
                     <h3>Pret total:</h3>
-                    <p>'.$inreg['pret'] * $inreg['cantitate'].' lei</p>
+                    <p>'.$inreg['pret'] * $cantitate.' lei</p>
                 </span>
            </div>
        </div>');
@@ -194,3 +198,7 @@ if (mysqli_connect_errno()) {
 </body>
 
 </html>
+
+<?php
+   $_SESSION["totalComanda"]= $total_value;
+?>

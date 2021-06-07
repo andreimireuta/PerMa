@@ -22,6 +22,7 @@ if (mysqli_connect_errno()) {
     <link rel="stylesheet" href="styles/account.css">
     <link rel="stylesheet" href="styles/shop.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="styles/account.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <title>Account</title>
 </head>
@@ -75,7 +76,7 @@ if (mysqli_connect_errno()) {
     <div class="container-principal">
         <div class="navigation-ul">
             <ul>
-                <li>
+                <li id="option1">
                     <a href="#">
                         <span class="icon"><i class="fas fa-user-circle"></i></span>
                         <span class="title">Account details</span>
@@ -88,13 +89,13 @@ if (mysqli_connect_errno()) {
                         <span class="title">Favourite list</span>
                     </a>
                 </li>
-                <li>
+                <li id="option2">
                     <a href="#">
                         <span class="icon"><i class="fas fa-lock"></i></span>
                         <span class="title">Change password</span>
                     </a>
                 </li>
-                <li>
+                <li id="option3">
                     <a href="#">
                         <span class="icon"><i class="fas fa-envelope"></i></span>
                         <span class="title">Change email</span>
@@ -111,7 +112,61 @@ if (mysqli_connect_errno()) {
             </ul>
         </div>
         <div class="mainc">
-        
+                    <div id="option11">
+                        <div class="main-container-opt">
+                            <div class="inputs-opt">
+                                <form action="">
+                                    <label for="firstName">First Name:</label>
+                                    <input type="text" name="firstName" value="">
+                                    <br>
+                                    <label for="lastName">Last Name:</label>
+                                    <input type="text" name="lastName" value="">
+                                    <br>
+                                    <label for="dataNasterii">Data Nasterii:</label>
+                                    <input type="date" name="dataNasterii" value="">
+                                    <br>
+                                    Sex:
+                                    <br>
+                                    <input type="radio" name="gender" value="male" id="male">
+                                    <label for="male" class="gender">Barbat</label>
+                                    <br>
+                                    <input type="radio" name="gender" id="female" value="female">
+                                    <label for="female" class="gender">Female</label>
+                                    <br>
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="option22">
+                        <div class="main-container-opt">
+                            <div class="inputs-opt">
+                                <form action="">
+                                    <label for="currentPassword">Current Password:</label>
+                                    <input type="password" name="currentPassword" id="currentPassword">
+                                    <br>
+                                    <label for="currentPassword">New Password:</label>
+                                    <input type="password" name="currentPassword" id="currentPassword">
+                                    <br>
+                                    <label for="currentPassword">Retype new Password:</label>
+                                    <input type="password" name="currentPassword" id="currentPassword">
+                                    <br>
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="option33">
+                        <div class="main-container-opt">
+                            <div class="inputs-opt">
+                                <label for="currentEmail">Current email</label>
+                                <input type="email" name="currentEmail" id="currentEmail">
+                                <label for="newEmail">New email</label>
+                                <input type="email" name="newEmail" id="newEmail">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
 
         </div>
     </div>
@@ -132,8 +187,12 @@ if (mysqli_connect_errno()) {
 
     </footer>
 
-    <script src="js_scripts/account.js"></script>
-    <script src="js_scripts/shop.js"></script>
+    <!-- <script>
+        alert("merge");
+    </script> -->
+    <script src="js_scripts/account.js">
+    </script>
+    <!-- <script src="js_scripts/shop.js"></script> -->
 </body>
 
 </html>
