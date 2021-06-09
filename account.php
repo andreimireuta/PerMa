@@ -143,15 +143,15 @@ if (mysqli_connect_errno()) {
                     <div id="option22">
                         <div class="main-container-opt">
                             <div class="inputs-opt">
-                                <form action="">
+                                <form action="php_scripts/changePassword.php" method="POST">
                                     <label for="currentPassword">Current Password:</label>
                                     <input type="password" name="currentPassword" id="currentPassword">
                                     <br>
-                                    <label for="currentPassword">New Password:</label>
-                                    <input type="password" name="currentPassword" id="currentPassword">
+                                    <label for="newPassword">New Password:</label>
+                                    <input type="password" name="newPassword" id="newPassword">
                                     <br>
-                                    <label for="currentPassword">Retype new Password:</label>
-                                    <input type="password" name="currentPassword" id="currentPassword">
+                                    <label for="retypePassword">Retype new Password:</label>
+                                    <input type="password" name="retypePassword" id="retypePassword">
                                     <br>
                                     <button type="submit">Submit</button>
                                 </form>
@@ -198,6 +198,7 @@ if (mysqli_connect_errno()) {
 </body>
 
 </html>
+
 <?php
 // function log_out(){
      //if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -29,7 +29,10 @@ if (mysqli_connect_errno()) {
 <body>
     <div class="container">
         <span class="titlu"><h1>Documentatie proiect PerMa</h1></span>
-        <span class="autor"></span>
+        <span class="autor">
+            <p>Mireuta Andrei-Marian</p>
+            <p>tel:</p>
+        </span>
     </div>
 </body>
 </html>

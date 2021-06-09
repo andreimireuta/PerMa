@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $comp=$_POST['compozitie'];
     $cat=$_POST['categorie'];
     $pret=$_POST['pret'];
-    // echo $den .'\n' ,$desc,$comp,$cat,$pret;
+    echo $den .'\n' ,$desc,$comp,$cat,$pret;
 
-    $sql = ("INSERT INTO products");
+    // $sql = ("INSERT INTO products");
 }
 ?>
