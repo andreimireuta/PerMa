@@ -18,8 +18,7 @@ $(document).ready(function(){console.log("Uraaaaaa!");
         //clickedFullDesc.innerHTML="Hide full description";
         clickedFullDesc1.style.display="none";
         clickedFullDesc.style.display="block";
-        console.log("clicked it!");
-        console.log("clicked it!");
+       
     });
 
 });
