@@ -9,6 +9,8 @@
 
 <!DOCTYPE html>
 <?php
+//   <input class="f_input1" type="submit" name="produs" id="produs" value="'.$inreg['id'].'" size="30">
+
 session_start();
 $mysql = new mysqli (
 	'localhost', // locatia serverului (aici, masina locala)
@@ -95,8 +97,12 @@ if (mysqli_connect_errno()) {
 
                         <div class="produs">
                             <form action="product.php" method="post">
-                                <label for="produs"><a href="product.php" ><img src="images/products/'.$inreg['id'].'.png" alt=""></a></label>
-                                <input class="f_input1" type="submit" name="produs" id="produs" value="'.$inreg['id'].'" size="30">
+                                
+                                <button class="f_input1"  type="submit" name="produs" id="produs" value="'.$inreg['id'].'" size="30">
+                                    <a href="product.php" >
+                                        <img src="images/products/'.$inreg['id'].'.png" alt="">
+                                    </a>
+                                </button>
                             </form>
                             
                             <div class="overlay"> 
@@ -123,6 +129,7 @@ if (mysqli_connect_errno()) {
     </div>
     <footer id="footer">
         <div id="bottom">
+           
             <div class="scholarly">
                 <a href="Scholarly.php">Scholarly HTML</a>
             </div>

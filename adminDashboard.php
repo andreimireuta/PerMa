@@ -80,8 +80,8 @@ if(mysqli_num_rows($rez5) > 0){
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icon"><i class="fas fa-comments"></i></span>
-                        <span class="title">Messages</span>
+                        <span class="icon"><i class="fas fa-download"></i></span>
+                        <span class="title">Download</span>
                     </a>    
                     
                 </li>

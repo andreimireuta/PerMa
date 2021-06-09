@@ -39,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now loged in";
             setcookie("userName", $username, time()+(86400*30), "/");
+            setcookie("idClient",$id,time()+(86400*30), "/");
             echo "salut $username";
             header('location: ../home.php');
         }
