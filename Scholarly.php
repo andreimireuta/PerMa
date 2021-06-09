@@ -30,7 +30,7 @@ if (mysqli_connect_errno()) {
     <div class="container">
         <span class="titlu"><h1>Documentatie proiect PerMa</h1></span>
         <span class="autori">
-            <h2>autori:</h2>
+            <h2>Autori:</h2>
             <p>Mireuta Andrei-Marian</p>
             <p>email:</p>
             <p>tel:</p>
@@ -68,7 +68,26 @@ if (mysqli_connect_errno()) {
                 <img src="screenshots/produs_home.png" alt="un produs de pe shop page">
             </div>
             <div class="pagina">
-
+                <h3>Pagina Account</h3>
+                <p>Pe aceasta pagina, utilizatorul paote sa vada detalii despre contul sau, sa schimbe parola, email-ul si sa isi adauge niste date personale. De asemenea, de pe acasta pagina el poate iesi din site si poate da sign out.
+                    Pagina contine un meniu lateral cu diferite optini si o pagina principala de afisare al acestor optiuni.
+                </p>
+                <img src="screenshots/bara_account.png" alt="bara de navigatie de pe pagina account">
+            </div>
+            <div class="pagina">
+                <h3>Pagina Cart</h3>
+                <p>Pagina cart este si ea una foarte imporatnta, deoarece aici utilizatorul poate vedea toate produsele pe care el le-a pus in cos cu scopul de a le cumpara. Aici se gasesc pozele produselor din magazin impreuna cu pretul total al acestora , cantitatea si pretul total al comenzii.
+                    In functie de pretul comenzii este afisat si pretul transportului. De asemenea utilizatorul va putea vedea cate produse a comandat, care este pretul pe bucata si pretul total al fiecarui produs.
+                    In imaginea de mai jso se paote vedea un cos in care utilizatorul nu a pus nimic.
+                </p>
+                <img src="screenshots/cos_gol.png" alt="col gol" width="50%">
+            </div>
+            <div class="pagina">
+                <h3>pagina de checkout</h3>
+                <p>Pagina de checkout este pagina care se va afisa dupa ce utilizatorul se decide sa achizitioneze produsele care se afla in cos. El va fi nevoit sa completeze informatiile dintr-un formular pentru a reusi sa finalizeze comanda.
+                    Dupa ce face acest lucru si comanda este finalizata cu succes utilizatorul va di redirectionat catre o pagina de multumire.
+                </p>
+                <img src="screenshots/checkout_front.png" alt=" pagina de checkout">
             </div>
         </div>
     </div>
