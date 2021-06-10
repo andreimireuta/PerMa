@@ -32,8 +32,8 @@ if (mysqli_connect_errno()) {
         <span class="autori">
             <h2>Autori:</h2>
             <p class="intro">Mireuta Andrei-Marian</p>
-            <p class="intro">email:</p>
-            <p class="intro">tel:</p>
+            <p class="intro">email: andreimireutam@gmail.com</p>
+            <p class="intro">tel: +40758186092</p>
             <p class="intro">Cojocaru Adrian</p>
             <p class="intro">email:</p>
             <p class="intro">tel:</p>
@@ -60,7 +60,7 @@ if (mysqli_connect_errno()) {
                 <img src="screenshots/radio.png" alt="butoane radio">
             </div>
             <div class="pagina">
-                <h3>Pagina Shop</h3>
+                <h3>--Pagina Shop--</h3>
                 <p>Pagina Shop este cea mai importanta pagina a site-ului deoarece pe aceasta se afla parfumurile pe care le are site-ul. In functie de dimensiunea ecranului, perfumurile vor fi afisate cate 3, 2 sau cate 1.
                     Aceasta pagina contine titlurile parfumurilor impreuna cu pretul acestora si un "review" (nufunctional, este doar de design, momentan). De asemenea, cand dam scroll peste produse, vor aparea iste icon-uri
                     care au ca scop introducerea produselor in cos, in lista de favorite sau in lista de vizionare(nefunctional momentan).
@@ -68,14 +68,14 @@ if (mysqli_connect_errno()) {
                 <img src="screenshots/produs_home.png" alt="un produs de pe shop page">
             </div>
             <div class="pagina">
-                <h3>Pagina Account</h3>
+                <h3>--Pagina Account--</h3>
                 <p>Pe aceasta pagina, utilizatorul paote sa vada detalii despre contul sau, sa schimbe parola, email-ul si sa isi adauge niste date personale. De asemenea, de pe acasta pagina el poate iesi din site si poate da sign out.
                     Pagina contine un meniu lateral cu diferite optini si o pagina principala de afisare al acestor optiuni.
                 </p>
                 <img src="screenshots/bara_account.png" alt="bara de navigatie de pe pagina account">
             </div>
             <div class="pagina">
-                <h3>Pagina Cart</h3>
+                <h3>--Pagina Cart--</h3>
                 <p>Pagina cart este si ea una foarte imporatnta, deoarece aici utilizatorul poate vedea toate produsele pe care el le-a pus in cos cu scopul de a le cumpara. Aici se gasesc pozele produselor din magazin impreuna cu pretul total al acestora , cantitatea si pretul total al comenzii.
                     In functie de pretul comenzii este afisat si pretul transportului. De asemenea utilizatorul va putea vedea cate produse a comandat, care este pretul pe bucata si pretul total al fiecarui produs.
                     In imaginea de mai jso se paote vedea un cos in care utilizatorul nu a pus nimic.
@@ -83,14 +83,14 @@ if (mysqli_connect_errno()) {
                 <img src="screenshots/cos_gol.png" alt="col gol" width="50%">
             </div>
             <div class="pagina">
-                <h3>Pagina de checkout</h3>
+                <h3>--Pagina de checkout--</h3>
                 <p>Pagina de checkout este pagina care se va afisa dupa ce utilizatorul se decide sa achizitioneze produsele care se afla in cos. El va fi nevoit sa completeze informatiile dintr-un formular pentru a reusi sa finalizeze comanda.
                     Dupa ce face acest lucru si comanda este finalizata cu succes utilizatorul va di redirectionat catre o pagina de multumire.
                 </p>
                 <img src="screenshots/checkout_front.png" alt=" pagina de checkout">
             </div>
             <div class="pagina">
-                <h3>Pagina pentru admin</h3>
+                <h3>--Pagina pentru admin--</h3>
                 <p>Pe aceasta pagina se pot vedea informatii despre comenzile plasate, despre pretul total al incasarilor, dar si despre clienti, numarul lor si alte detalii.
                     De asemenea, in aceasta pagina avem mai multe link-uri catre diferite optiuni, cum ar fi pagina de introducere a datelor in baza de date, pagina de descarcare a rapoturilor in formatul csv/pdf
                     si sign out.
@@ -99,7 +99,7 @@ if (mysqli_connect_errno()) {
             </div>
         </div>
         <div class="pagini">
-            <h2>Partea de back-end a site-ului</h2>
+            <h2>--Partea de back-end a site-ului--</h2>
             <div class="pagina">
                 <h3>Register page</h3>
                 <p>Pe aceasta pagina utilizatorii isi vor crea un cont. Pentru a face acest lucru am folosit un formular si metoda "POST" pentru a extrage datele din el.
@@ -112,7 +112,7 @@ if (mysqli_connect_errno()) {
                 <img src="screenshots/registarecusucces.png" alt="" >
             </div>
             <div class="pagina">
-                <h3>Login page</h3>
+                <h3>--Login page--</h3>
                 <p>Pe aceasta pagina utilizatorul se paote loga in site folosind datele introduse in formularul de inregistrare. Pentru a face acest lucru vom lua datele din formularul
                     de login si le vom cauta in baza de date. Daca vom gasi un user care sa corespunda datelor introduse atunci acesta este redirectionat catre pagina de home, altfel
                     va fi nevoit sa incerce din nou, pana cand datele introduse vor fi corecte.
