@@ -79,10 +79,18 @@ if(mysqli_num_rows($rez5) > 0){
                     
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-download"></i></span>
-                        <span class="title">Download</span>
-                    </a>    
+                    <form method="POST" action="php_scripts/download.php">
+                        <a href="#" id="download">
+                            <span class="icon"><i class="fas fa-download"></i></span>
+                            <span class="title">Download</span>
+                        </a>
+                        <button type="submit" id="download_button" style="display: none;"></button>
+                    </form>
+                    <script>
+                        document.getElementById("download").addEventListener("click", function(){
+                            document.getElementById("download_button").click();
+                        })
+                    </script>
                     
                 </li>
                 <li>

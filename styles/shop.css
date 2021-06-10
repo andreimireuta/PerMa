@@ -282,6 +282,20 @@ body{
         width: 40%;
     }
 }
+@media screen and (max-width:900px){
+    .container-produs{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width:600px){
+    .container-produs{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 @media screen and (max-width:768px){
     .nav-links{
         width: 45%;

@@ -27,11 +27,11 @@ $(document).ready(function(){
         //schimbareCuloare.style.backgroundColor= "white";
         
     });
-    schimbareAccount.addEventListener('mouseleave',function(){
-        schimbareAccount.style.display="none";
-        //schimbareCuloare.style.backgroundColor= "white";
+    // schimbareAccount.addEventListener('mouseleave',function(){
+    //     schimbareAccount.style.display="none";
+    //     //schimbareCuloare.style.backgroundColor= "white";
         
-    });
+    // });
 
     //pentru a face inima de wishlist rosie
     var clickedWishlist = document.getElementsByTagName("i");
