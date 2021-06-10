@@ -281,6 +281,12 @@ body{
     .nav-links{
         width: 40%;
     }
+    #line2{
+        left:30%
+    }
+    #bottom{
+        left: 5%;
+    }
 }
 @media screen and (max-width:900px){
     .container-produs{
@@ -288,12 +294,18 @@ body{
         flex: 0 0 50%;
         max-width: 50%;
     }
+    #line2{
+        left:22%
+    }
 }
 @media screen and (max-width:600px){
     .container-produs{
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    #line2{
+        left:15%
     }
 }
 @media screen and (max-width:768px){

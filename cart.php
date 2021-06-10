@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <?php
 session_start();
-$mysql = new mysqli (
-	'localhost', // locatia serverului (aici, masina locala)
-	'root',       // numele de cont
-	'',    // parola (atentie, in clar!)
-	'parfumes'   // baza de date
-	);
+$mysql = new mysqli(
+    'localhost', // locatia serverului (aici, masina locala)
+    'root',       // numele de cont
+    '',    // parola (atentie, in clar!)
+    'parfumes'   // baza de date
+);
 
 // verificam daca am reusit
 if (mysqli_connect_errno()) {
-	die ('ERROR: Could not connect.');
+    die('ERROR: Could not connect.');
 }
 ?>
 <html lang="en">
@@ -34,9 +34,9 @@ if (mysqli_connect_errno()) {
     <nav class="navbar">
 
         <div class="logo" id="logo">
-                <img src="images/fragrance.png" alt="" class="logo-img">
-                <h4 class="logo-title">FIN</h4>
-            
+            <img src="images/fragrance.png" alt="" class="logo-img">
+            <h4 class="logo-title">FIN</h4>
+
         </div>
         <ul class="nav-links">
             <li>
@@ -69,111 +69,108 @@ if (mysqli_connect_errno()) {
 
 
     <form method="POST" action="checkout.php">
-    <div class="container-produse">
+        <div class="container-produse">
 
-    <?php
-    $link = mysqli_connect("localhost","root","","parfumes");
+            <?php
+            $link = mysqli_connect("localhost", "root", "", "parfumes");
 
-    $sql = mysqli_prepare($link,"SELECT id from users where username like ? ");
-    mysqli_stmt_bind_param($sql,"s", $_COOKIE['userName']);
-    mysqli_stmt_execute($sql);
-    mysqli_stmt_bind_result ( $sql, $res1);
-    mysqli_stmt_fetch($sql);
-    //echo('Avem id client: '.$res1.'');
+            $sql = mysqli_prepare($link, "SELECT id from users where username like ? ");
+            mysqli_stmt_bind_param($sql, "s", $_COOKIE['userName']);
+            mysqli_stmt_execute($sql);
+            mysqli_stmt_bind_result($sql, $res1);
+            mysqli_stmt_fetch($sql);
+            //echo('Avem id client: '.$res1.'');
 
-    $cookie_name = "userID";
-    setcookie($cookie_name,$res1,time() + (86400 * 30), "/");
+            $cookie_name = "userID";
+            setcookie($cookie_name, $res1, time() + (86400 * 30), "/");
 
-    $total_value = 0;
-    $total_cant=0;
+            $total_value = 0;
+            $total_cant = 0;
 
-    $idClient = $_COOKIE['userID'];
+            $idClient = $_COOKIE['userID'];
 
-    if (!($rez = $mysql->query ('select id,id_produs,denumire,pret,categorie,cantitate,id_client from cart where id_client = '.$idClient.''))) {
-        die ('A survenit o eroare la interogare');
-    }
-    while($inreg = $rez->fetch_assoc()){
-         $total_value = $total_value + $inreg['cantitate'] * $inreg['pret'] ;
-         $total_cant += $inreg['cantitate'];
-         $cantitate=$inreg['cantitate'];
-         if($inreg['cantitate']==0)
-            $cantitate = 1;
-        
+            if (!($rez = $mysql->query('select id,id_produs,denumire,pret,categorie,cantitate,id_client from cart where id_client = ' . $idClient . ''))) {
+                die('A survenit o eroare la interogare');
+            }
+            while ($inreg = $rez->fetch_assoc()) {
+                $total_value = $total_value + $inreg['cantitate'] * $inreg['pret'];
+                $total_cant += $inreg['cantitate'];
+                $cantitate = $inreg['cantitate'];
+                if ($inreg['cantitate'] == 0)
+                    $cantitate = 1;
 
 
-      echo( '<div class="container-produs">
+
+                echo ('<div class="container-produs">
            <div class="imagine-titlu">
                 <div class="imagine">
-                    <img src="images/products/'.$inreg['id_produs'].'.png" alt="">
+                    <img src="images/products/' . $inreg['id_produs'] . '.png" alt="">
                 </div>
                 <span class="info">
-                        <p> '.$inreg['denumire'].'</p>
+                        <p> ' . $inreg['denumire'] . '</p>
                     </span>
            </div>
            <div class="informatii">
            <span class="cantitate">
                     <h3>Cantitate:</h3>
-                    <input type="number" name="cantitate" id="cantitate" min="0" value='.$cantitate.'>
+                    <input type="number" name="cantitate" id="cantitate" min="0" value=' . $cantitate . '>
                     <a href="cart.php" id="refresh">Actualizeaza</a>
                     
                 </span>
                 <span class="pret-unitar">
                     <h3>Pret unitar:</h3>
-                    <p>'.$inreg['pret'].' lei</p>
+                    <p>' . $inreg['pret'] . ' lei</p>
                 </span>
                 <span class="pret-total">
                     <h3>Pret total:</h3>
-                    <p>'.$inreg['pret'] * $cantitate.' lei</p>
+                    <p>' . $inreg['pret'] * $cantitate . ' lei</p>
                 </span>
            </div>
        </div>');
-        }
-    ?>
-       
-       <hr>
-       <div class="checkout-info">
-            <span class="total-price">
-                <h2>Cost produse:</h2>
-                <h2 class="price-checkout"><?php echo $total_value; ?> de lei</h2>
-            </span>
-            <span class="total-cumparate">
-                <h2>Produse cumparate: </h2>
-                <h2><?php echo $total_cant; ?></h2>
-            </span>
-            <span class="cost-transport">
-                <h2>Cost transport: </h2>
-                <h2>
-                    <?php 
-                    $transport=0;
-                        if($total_value <=500)
-                        {
+            }
+            ?>
+
+            <hr>
+            <div class="checkout-info">
+                <span class="total-price">
+                    <h2>Cost produse:</h2>
+                    <h2 class="price-checkout"><?php echo $total_value; ?> de lei</h2>
+                </span>
+                <span class="total-cumparate">
+                    <h2>Produse cumparate: </h2>
+                    <h2><?php echo $total_cant; ?></h2>
+                </span>
+                <span class="cost-transport">
+                    <h2>Cost transport: </h2>
+                    <h2>
+                        <?php
+                        $transport = 0;
+                        if ($total_value <= 500) {
                             echo "20 lei";
                             $transport = 20;
-                        }
-                        else{
+                        } else {
                             echo " gratuit";
-
                         }
-                            
-                
-                    ?>
-                </h2>
-            </span>
-            <span class="total-checkout">
-                <h1>Total de plata:</h1>
-                <h1 class="price-total">
-                <?php 
-                    echo $transport + $total_value;        
-                
-                ?>
-                de lei</h1>
-            </span>
-            <span class="finalizare-comanda">
-                <button type="submit">Continuare comanda</button>
-            </span>
 
-       </div>
-    </div>
+
+                        ?>
+                    </h2>
+                </span>
+                <span class="total-checkout">
+                    <h1>Total de plata:</h1>
+                    <h1 class="price-total">
+                        <?php
+                        echo $transport + $total_value;
+
+                        ?>
+                        de lei</h1>
+                </span>
+                <span class="finalizare-comanda">
+                    <button type="submit">Continuare comanda</button>
+                </span>
+
+            </div>
+        </div>
     </form>
     <footer id="footer">
         <div id="bottom">
@@ -191,7 +188,7 @@ if (mysqli_connect_errno()) {
 
 
     </footer>
-    
+
 
     <script src="js_scripts/cart.js"></script>
     <script src="js_scripts/shop.js"></script>
@@ -200,5 +197,5 @@ if (mysqli_connect_errno()) {
 </html>
 
 <?php
-   $_SESSION["totalComanda"]= $total_value;
+$_SESSION["totalComanda"] = $total_value;
 ?>

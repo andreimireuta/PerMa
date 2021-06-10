@@ -126,3 +126,16 @@ span{
     text-align:left;
     z-index: 1;
 }
+@media screen and (max-width:600px){
+    .form-box{
+        width: 300px;
+        height: 400px;
+    }
+    .input-group{
+        top: 100px;
+        position: absolute;
+        width: 180px;
+        transition: all 0.8s ease;
+    
+    }
+}
