@@ -1,5 +1,5 @@
 <?php
-// header('location: ../thankyou.php');
+header('location: ../thankyou.php');
 session_start();
  $mysql = new mysqli (
     'localhost', // locatia serverului (aici, masina locala)
