@@ -50,6 +50,11 @@ if (mysqli_connect_errno()) {
             <img src="images/fragrance.png" alt="" class="logo-img">
             <h4 class="logo-title">FIN</h4>
         </div>
+        <div class="search">
+            <label for="search">
+                <input type="text" placeholder="Search here" name="search" id="myInput" onkeyup="myFunction()">
+            </label>
+        </div>
         <ul class="nav-links">
             <li>
                 <i class="fas fa-home"></i>
@@ -85,15 +90,15 @@ if (mysqli_connect_errno()) {
     </nav>
 
 
-    <div class="container-poze">
+    <div class="container-poze" id="container-poze">
         <h1>Parfumuri pentru barbati</h1>
-        <div class="row">
+        <div class="row" id="row">
             <?php
                 if (!($rez = $mysql->query ('select id,denumire,pret,categorie from products'))) {
                     die ('A survenit o eroare la interogare');
                 }
                 while ($inreg = $rez->fetch_assoc()) {
-                    echo('<div class="container-produs">
+                    echo('<div class="container-produs" id="container-produs">
 
                         <div class="produs">
                             <form action="product.php" method="post">
@@ -111,12 +116,12 @@ if (mysqli_connect_errno()) {
                                 <button type="button" class="button-produs cart" title="Quick Shop"><i class="fa fa-shopping-cart"></i></button>
                             </div>
                         </div>
-                        <div class="produs-info">
+                        <div class="produs-info" id="produs-info">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-half"></i>
-                            <h2>'.$inreg['denumire'].'</h2>
+                            <h2 id="den" class="den">'.$inreg['denumire'].'</h2>
                             <h3>'.$inreg['pret'].' lei</h3>
                         </div>
                     </div>');
@@ -129,7 +134,7 @@ if (mysqli_connect_errno()) {
     </div>
     <footer id="footer">
         <div id="bottom">
-           
+
             <div class="scholarly">
                 <a href="Scholarly.php">Scholarly HTML</a>
             </div>
@@ -145,6 +150,55 @@ if (mysqli_connect_errno()) {
 
     </footer>
 
+    <script>
+    function myFunction() {
+        var input, filter, ulc, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ulc = document.getElementsByClassName("container-produs");
+        li = document.getElementsByClassName('produs-info');
+        console.log(li);
+
+         for (i = 0; i < li.length; i++) {
+             a = li[i].getElementsByTagName("h2")[0].innerText;
+             console.log(a);
+            //  textValue = a.textContent || a.innerText;
+            // textValue= a;
+            //  console.log(txtValue);
+             if (a.toUpperCase().indexOf(filter) > -1) {
+                 removeClass(ulc[i], "show");
+             } else {
+                 addClass(ulc[i], "show");
+             }
+
+         }
+        console.log("Ati introdus" + filter);
+    }
+   
+
+    function addClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    function removeClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+    </script>
 
 
     <script src="js_scripts/shop.js">
