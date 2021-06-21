@@ -79,16 +79,31 @@ if(mysqli_num_rows($rez5) > 0){
                     
                 </li>
                 <li>
-                    <form method="POST" action="php_scripts/download.php">
-                        <a href="#" id="download">
+                    <form method="POST" action="php_scripts/download_csv.php">
+                        <a href="#" id="download1">
                             <span class="icon"><i class="fas fa-download"></i></span>
-                            <span class="title">Download</span>
+                            <span class="title">Download CSV</span>
                         </a>
-                        <button type="submit" id="download_button" style="display: none;"></button>
+                        <button type="submit" id="download_button1" style="display: none;"></button>
                     </form>
                     <script>
-                        document.getElementById("download").addEventListener("click", function(){
-                            document.getElementById("download_button").click();
+                        document.getElementById("download1").addEventListener("click", function(){
+                            document.getElementById("download_button1").click();
+                        })
+                    </script>
+                    
+                </li>
+                <li>
+                    <form method="POST" action="php_scripts/download_pdf.php">
+                        <a href="#" id="download2">
+                            <span class="icon"><i class="fas fa-download"></i></span>
+                            <span class="title">Download PDF</span>
+                        </a>
+                        <button type="submit" id="download_button2" style="display: none;"></button>
+                    </form>
+                    <script>
+                        document.getElementById("download2").addEventListener("click", function(){
+                            document.getElementById("download_button2").click();
                         })
                     </script>
                     
