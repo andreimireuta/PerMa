@@ -1,4 +1,5 @@
 <?php
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = "";
     $password= "";
@@ -32,11 +33,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //$sql1 = "SELECT id from users where username ='$username'";
             //$res1 = mysqli_query($mysqli,$sql1);
 
+            $row = mysqli_fetch_assoc($reuslt);
+
              //creare cookie id client
             //$cookie_name = "userID";
             //setcookie($cookie_name,$res1,time() + (86400 * 30), "/");
 
             $_SESSION['username'] = $username;
+            $email = $row['email'];
+            echo $email;
+            $id = $row['id'];
+            $_SESSION["email"] =$email;
             $_SESSION['success'] = "You are now loged in";
             setcookie("userName", $username, time()+(86400*30), "/");
             setcookie("idClient",$id,time()+(86400*30), "/");

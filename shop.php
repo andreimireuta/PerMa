@@ -165,16 +165,21 @@ if (mysqli_connect_errno()) {
             //  textValue = a.textContent || a.innerText;
             // textValue= a;
             //  console.log(txtValue);
+            var clas=ulc[i];
              if (a.toUpperCase().indexOf(filter) > -1) {
-                 removeClass(ulc[i], "show");
+                //  removeClass(ulc[i], "show");
+                clas.classList.remove("show");
              } else {
-                 addClass(ulc[i], "show");
+                //  addClass(ulc[i], "show");
+                clas.classList.add("show");
              }
 
          }
         console.log("Ati introdus" + filter);
     }
    
+    //le-am folosit pentru a face seacrh din orice browser, functii in plus
+    
 
     function addClass(element, name) {
         var i, arr1, arr2;

@@ -16,6 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pret=$_POST['pret'];
     echo $den .'\n' ,$desc,$comp,$cat,$pret;
 
-    // $sql = ("INSERT INTO products");
+    $sql = ("INSERT INTO products(denumire,descriere,compozitie,categorie,pret) VALUES ('$den','$desc','$comp','$cat','$pret')");
+    if(mysqli_query($mysqli,$sql)){
+      echo "Succes";
+    }
+    else{
+      echo "A avut loc o eroare";
+    }
 }
 ?>
